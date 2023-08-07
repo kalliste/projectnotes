@@ -23,12 +23,14 @@ After we make the hook scripts, we need to attach them to the machine like so: `
 #!/usr/bin/bash
 
 function launch() {
-    nohup /usr/lib/kvm/virtiofsd --syslog --socket-path=/var/run/shared-vhost-fs.sock -o source=/zfs0/shared -o cache=always &> /dev/null &
+    nohup /usr/lib/kvm/virtiofsd --posix-acl --syslog --socket-path=/var/run/shared-vhost-fs.sock -o source=/zfs0/shared -o cache=always &> /dev/null &
     return 0
 }
 
 launch
 ```
+
+Since we are using the newer Rust based virtiofsd, we remove the `--daemonize` argument in `launch-virtio-daemon.sh` and we also add the `--posix-acl` option since we need that in the guest.
 
 ### /var/lib/vz/snippets/virtiofs.pl
 ```
