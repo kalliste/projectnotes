@@ -16,6 +16,8 @@ Also, a few key items in the scripts need to be edited for each instance, and mu
 - `virtiofs.pl` needs the correct path for `launch-virtio-daemon.sh`
 - The virtiofs filesystem tag in the VM config file in `/etc/pve/qemu-server` will need to match the mount command or fstab entry in the guest VM
 
+After we make the hook scripts, we need to attach them to the machine like so: `qm set 100 --hookscript local:snippets/virtiofs.pl`
+
 ### /var/lib/vz/snippets/launch-virtio-daemon.sh
 ```
 #!/usr/bin/bash
