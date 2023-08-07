@@ -113,7 +113,7 @@ fileshare /zfs0/shared virtiofs defaults 0 0
 ```
 
 
-## hugetblfs
+## Huge Pages
 
 We tried setting up hugetblfs for better performance but it locked things up and prevented the machine from booting. We don't actually need it for things to work.
 
