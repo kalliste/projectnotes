@@ -114,6 +114,10 @@ https://www.racketboy.com/retro/the-best-43-square-lcd-monitors-for-retro-gaming
 
 # Software
 
+### Notes on OS versions
+
+https://www.reddit.com/r/amiga/comments/103sqq0/new_to_amiga_a_bit_confused_about_amiga_os_4/
+
 ### Amiga Forever: Legitimate License for original Commodore IP
 
 http://www.amigaforever.com/
