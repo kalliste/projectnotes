@@ -1,6 +1,6 @@
 Might be worth looking at Epson home cinema projectors. I went with Epson because you whatever projector you get you'll be replacing the bulb every couple of years and last I checked, Epson doesn't screw you as hard on those.
 
-It's /significantly/ more work to install than a TV but you're probably not going to buy a TV the size of your wall.
+It's <em>significantly</em> more work to install than a TV but you're probably not going to buy a TV the size of your wall.
 
 After installing it in 4 different places I've learned not to pretend that you're going to successfully mount it off angle and mess around with trapezoids to get it lined up right.
 
