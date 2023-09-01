@@ -1,26 +1,9 @@
 
 # Design of a new programming language and development environment: why, what, and how
 
-# My Backstory
+# Background
 
-tl;dr - I've been tinkering with computers and writing software for a while. I put in my 10,000 hours several times over, and have developed some thoughts and opinions over time.
-
-<strong><em>You should probably skip this entire section and get on to the good stuff in [First I must sprinkle you with fairy dust](#first-i-must-sprinkle-you-with-fairy-dust
-) or [Desired Properties](#desired-properties) below.</em></strong>
-
-In elementary school I found a book on programming in BASIC in the school library and wrote programs on paper but didn't have a computer to run them on. When I did get my hands on a PC running MS-DOS 5 I got access to QBasic, and learned by playing with modifying the included Gorilla and Nibbles games.
-
-My middle school required everyone to take a semester in computer literacy which included typing practice and using a spreadsheet. This was on an Apple II and may have been VisiCalc. In the optional second semester advanced computer literacy course I picked up Hypercard.
-
-In high school I took the computer science course, which used Turbo Pascal 7 for DOS. This was the summit of what the high school offered but the school district was happy to pay for any courses I wished to take at the community college, so I took courses in C, C++, and Visual Basic. I also later took the basic programming course at the high school due to strange circumstances - normally a prerequisite to the Pascal course I had already taken. I ignored the curriculum and instead pulled in a couple of assembly routines and made a mouse driven paint program. As a senior I took computer applications independent study and get Linux running on Power Macintosh G3 - this was non-trivial at the time.
-
-At university, I briefly touched MATLAB and Mathematica, and took courses in data structures and assembly programming. I also founded a Linux Users Group and made my own Linux distribution. The Malcom Linux Distribution was a full rebuild of Mandrake Linux with different compiler optimizations, and additional graphical configuration tools. The name was based on the Jurassic Park quote about shoulders of giants but the login screen featured a picture of Malcolm X, since it was the Malcolm Linux X Window System, or Malcolm X Window System.
-
-When college didn't work out for me, I worked in Linux and Unix system administration at four or five companies, and then transitioned into freelance programing. I learned PHP, JavaScript, MySQL, C#, Ruby, and Python. When I returned to academia and worked in the Eagleman Neuroscience Lab I picked up Java to work on a mobile app and learned R for data analysis, including particularly ggplot2. I taught a for-credit summer course in R programming for some Rice University students.
-
-Eventually, when looking for more clients, I made it through a very lengthy and rigorous process to become identified as a Top 3% developer and member of the Toptal marketplace. I clocked about 4000 billable hours of work through Toptal in addition to my work with my direct clients.
-
-In 2022, dissatisfied with the state of my tools, I jumped into a very deep dive exploring the landscape, history, and status of programming languages, programming language design, and software development environments, methods, and tools.
+Starting in 2022, dissatisfied with the state of my tools, I jumped into a very deep dive exploring the landscape, history, and status of programming languages, programming language design, and software development environments, methods, and tools.
 
 In this document I am assembling some notes about this research and collecting the results of that deep dive into something more of a coherent vision.
 
@@ -98,6 +81,8 @@ For some examples of moldable environments, see Smalltalk, TiddlyWiki, and Lisp 
 
 # Second Level Principles
 
+## Rust Interoperation
+
 ## Small
 
 ## Opinionated
@@ -164,6 +149,22 @@ Love using it, but it's too arcane. Leave it out for now. Watch closely about le
 
 Nicely terse but we can be less arcane by not having them. They are for mutation so not valid in a pure functional language anyway.
 
+### Regular expressions
+
+Here comes some theory!
+
+So.... it seems like we can
+- Convert a simple string equality comparison to a regex
+- Convert a string subset comparison to a regex
+- Take two regexes and easily produce a third which matches the set of things that match either
+- (and with a possibly heavy but known algorithm) compare two regular expressions for equality
+
+So seems like it would be possible to prove exhaustiveness in an automated way for pattern matching with regex comparisons.
+
+It's just crazy enough - maybe let's go for it. Then we can make a funny GAAS (Grep As A Service) API some day that does this wizardry.
+
+So go ahead and have regex literals, =~ string-regex comparison, regex-regex == operator, pattern matches on regex.
+
 ### Operator overloading
 
 Maybe.... maybe.
@@ -217,6 +218,37 @@ Later we can look at building data structure libraries that take the approach of
 ### Maybe we don't have to be fascists about side effects all the time
 
 We're not trying to make a Haskell here. Lisp, Erlang, and even OCaml let you just print things
+
+# Prior languages
+
+### gluon
+
+https://github.com/gluon-lang/gluon
+
+### Rhai
+
+https://github.com/rhaiscript/rhai
+
+Rhai is an embedded scripting language and evaluation engine for Rust that gives a safe and easy way to add scripting to any application.
+
+Tight integration with native Rust functions and types, including getters/setters, methods and indexers.
+
+For those who actually want their own language:
+1. Use as a DSL.
+1. Disable certain language features such as looping.
+1. Further restrict the language by surgically disabling keywords and operators.
+1. Define custom operators.
+1. Extend the language with custom syntax.
+
+
+All CPU and O/S targets supported by Rust, including:
+1. WebAssembly (WASM)
+1. no-std
+
+
+### rune
+
+https://github.com/rune-rs/rune
 
 # Traps
 
@@ -276,7 +308,7 @@ Also would be key to have a good JSON type - needs to map to
 
 Someone had a video, article, library about method naming conventions for collections - worth checking.
 
-Some more thought may be needed as far as special support for things like trees.
+graphs https://docs.rs/petgraph/latest/petgraph/
 
 We do need data frames.
 
@@ -328,20 +360,21 @@ https://github.com/mpv-player/mpv-examples/blob/master/libmpv/sdl/main.c
 
 https://docs.rs/libmpv/2.0.1/libmpv/
 
-# Images
+## Images
 
 Use GraphicsMagick
+
+# Code Katas for prep
+
 
 
 # Inspiration
 
-### Stop Writing Dead Programs
-
-https://youtu.be/8Ab3ArE8W3s?si=YPX7LP5TJfoNLdbl
-
 ### Some great quotes
 
 "Any sufficiently complicated C or Fortran program contains an ad hoc, informally-specified, bug-ridden, slow implementation of half of Common Lisp." - Greenspun's tenth rule
+
+"Regarding the fact that I regret adding threads to the language because they are too difficult to use correctly, I don't want to add yet another variation of threads." - Yukihiro Matsumoto
 
 https://levelup.gitconnected.com/top-45-programming-quotes-24ebad417241
 
@@ -439,11 +472,93 @@ https://theia-ide.org/
 
 # Backend
 
+## Memory Management / Performance Techniques from related projects
+
+A unified theory of garbage collection
+https://courses.cs.washington.edu/courses/cse590p/05au/p50-bacon.pdf
+
+https://manishearth.github.io/blog/2021/04/05/a-tour-of-safe-tracing-gc-designs-in-rust/
+
+https://crates.io/crates/crossbeam-epoch
+
+https://github.com/asajeffrey/josephine
+
+### gc-arena
+
+https://crates.io/crates/gc-arena
+
+### bumpalo
+
+https://crates.io/crates/bumpalo
+
+### Morphic and Perseus
+
+https://morphic-lang.org/
+
+https://www.youtube.com/live/F3z39M0gdJU
+
+https://youtu.be/ZnYa99QoznE
+
+https://www.reddit.com/r/haskell/comments/qc4bxd/outperforming_imperative_with_pure_functional/
+
+https://www.microsoft.com/en-us/research/publication/perceus-garbage-free-reference-counting-with-reuse/
+
 ### Cranelift
 
 https://cranelift.dev/
 
 rustc_codegen_cranelift https://github.com/bjorn3/rustc_codegen_cranelift
+
+https://github.com/CraneStation/kaleidoscope-cranelift
+
+https://github.com/In-line/calculator
+
+"For end-user every mathematical expression is evaluated simultaneously by the interpreter and JIT compiler. JIT and Interpretator are racing to compute value first."
+
+https://github.com/0xekez/lisp
+
+https://web.archive.org/web/20220429160434/https://zmedley.com/lust/
+
+https://github.com/lechatthecat/marie
+
+https://github.com/mental32/monty
+
+https://github.com/chc4/lineiform
+
+https://blog.redvice.org/2022/lineiform-rust-meta-jit/
+
+"Lineiform is a meta-JIT library for Rust interpreters. Given an interpreter that uses closure generation, it allows an author to add minimal annotations and calls into Lineiform in order to automagically get an optimizing method JIT, via runtime function inlining and constant propagation to resolve dynamic calls to closed environment members. Internally it does lifting of closure bodies from x86 assembly to Cranelift IR for dynamic recompilation."
+
+https://github.com/billsjchw/tigerc-rs
+
+https://github.com/JohnDowson/CraneLisp
+
+https://github.com/swerdloj/jitter
+
+Jitter is a just-in-time (JIT) compiled scripting language designed with Rust interoperability in mind.
+
+Jitter evolved into a research project investigating the ideas of:
+- Treating a compiler as a library
+- Language extension mechanisms
+
+All data types in Jitter align with Rust's #[repr(C)]. Because all primitive types also align with Rust's, interop is simple.
+
+https://github.com/playXE/sierra-scheme
+
+https://github.com/CrockAgile/wasmcrime
+
+https://github.com/bayedieng/blox
+
+https://github.com/birktj/dyncall-rs
+
+https://github.com/bytecodealliance/cranelift-jit-demo
+
+https://github.com/capy-language/capy
+
+
+### Redmagic
+
+https://github.com/matthewfl/redmagic
 
 ### Linker
 
@@ -458,6 +573,10 @@ https://github.com/rust-bakery/nom
 https://tfpk.github.io/nominomicon/
 
 # Educational Resources
+
+https://book.marwood.io/
+
+https://craftinginterpreters.com/
 
 https://graydon2.dreamwidth.org/307291.html
 
