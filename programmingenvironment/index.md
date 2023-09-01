@@ -219,7 +219,39 @@ Later we can look at building data structure libraries that take the approach of
 
 We're not trying to make a Haskell here. Lisp, Erlang, and even OCaml let you just print things
 
-# Prior languages
+# Some prior languages and runtimes
+
+https://www.boringcactus.com/2020/09/16/survey-of-rust-embeddable-scripting-languages.html
+
+https://github.com/evcxr/evcxr
+
+https://github.com/rust-lang/miri
+
+### MiniVM / Paka
+
+https://github.com/FastVM/paka
+
+https://github.com/FastVM/minivm
+
+### passerine
+
+https://github.com/vrtbl/passerine
+
+Q: What is vaporization memory management?
+
+A: When I was first designing Passerine, I was big into automatic compile-time memory management. Currently, there are a few ways to do this: from Rust's borrow-checker, to µ-Mitten's Proust ASAP, to Koka's Perceus, there are a lot of new and exciting ways to approach this problem.
+
+Vaporization is an automatic memory management system that allows for Functional but in Place style programming. For vaporization to work, three invariants must hold:
+
+1. All functions params are passed by value via a copy-on-write reference. This means that only the lifetimes of the returned objects need to be preserved, all others will be deleted when they go out of scope.
+1. A form of SSA is performed, where the last usage of any value is not a copy of that value.
+1. All closure references are immutable copies of a value. These copies may be reference-counted in an acyclical manner.
+
+With these invariants in place, vaporization ensures two things:
+
+1. Values are only alive where they are still useful.
+1. Code may be written in a functional style, but all mutations occur in-place as per rule 2.
+
 
 ### gluon
 
@@ -245,6 +277,14 @@ All CPU and O/S targets supported by Rust, including:
 1. WebAssembly (WASM)
 1. no-std
 
+
+### ellie
+
+https://docs.ellie-lang.org/what_is_ellie.html
+
+### dyon
+
+https://github.com/pistondevelopers/dyon
 
 ### rune
 
