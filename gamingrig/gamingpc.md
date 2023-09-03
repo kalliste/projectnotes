@@ -195,7 +195,7 @@ https://www.newegg.com/g-skill-96gb/p/N82E16820374499
 
 A popular 4TB PCI 4.0 or 5.0 NVME SSD with a 5 year warranty and good reviews. Open to any brand if the reviews are good.
 
-MSI seems to have entered this market at some point and currently looking good. 
+MSI seems to have entered this market at some point and currently looking good. Also means extra confidence about the thickness being ideal for the motherboard's supplemental NVME cooling.
 
 https://www.newegg.com/msi-1tb-m461/p/N82E16820140039
 
