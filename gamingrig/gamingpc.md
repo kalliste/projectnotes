@@ -62,7 +62,7 @@ In the case of multiple micro SD cards, a slim holder may be useful
 
 https://www.amazon.com/Holder-Storage-Organizer-Lightweight-Portable/dp/B07T6SWXK5
 
-## Accessories and Peripherals (for both systems)
+# Accessories and Peripherals (for both systems)
 
 ### Monitor
 
