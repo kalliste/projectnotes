@@ -62,6 +62,8 @@ Linus Tech Tips Deskpad
 
 https://www.lttstore.com/collections/accessories?filter.p.m.filter.gear_type=Deskpad
 
+# Components
+
 ### CPU
 
 Intel i7-13700K
