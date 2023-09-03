@@ -21,15 +21,16 @@ However, if the Steam Deck will sometimes be used alone as an undocked portable 
 
 There are 3rd party screens available, but not recommending those today. The other features of the $649 model are entirely inconsequential.
 
-### Dock
+### Dock for home / office 
+
+A full docking station makes sense but only if it will using a dedicated monitojr, or if a separate (recent, high end) KVM device will be purchased.
 
 MOKIN Dual Monitor Docking station - supports both DisplayPort and HDMI Output
-(Only if the device will have a dedicated monitor)
 https://www.amazon.com/dp/B0BZV94FSF/
 
-If the device will be plugged into a Gigabyte M28U or M32U monitor with built-in KVM, one of the devices must be connected via USB-C, and it won't be the desktop.
+If the device will share a monitor with the full size PC and be plugged into a Gigabyte M28U or M32U monitor with built-in KVM, one of the devices must be connected via USB-C, and it probably won't be the desktop.
 
-Instead get a simple stand for the Steam Deck, and a high quality USB-C cable (important in this case - the monitor is picky about usb-c cables)
+Instead, get a simple stand for the Steam Deck, and a high quality USB-C cable (important in this case - the monitor is picky about usb-c cables)
 
 KUNSLUCK Stand
 https://www.amazon.com/Stand-Valve-Steam-Anti-Slip-Silicone/dp/B09TW292LK
@@ -41,6 +42,25 @@ The Plugable Thunderbolt 4 cable has been working great for me, while some other
 
 Plugable Thunderbolt 4 Cable - 1m (they also offer a 2m)
 https://www.amazon.com/gp/product/B09C2Y9VQ6/
+
+### Lapdock for Mobile
+
+This can be useful if you want to work with Word and Excel files or e-mail from a hotel room, coffee shop, plane, or other place where a monitor, keyboard, and mouse are not available.
+
+Uperfect has one specifically intended for use with the Steam Deck
+
+https://www.uperfectmonitor.com/products/steam-deck-external-monitor
+
+Other Lapdock devices aimed for use with Samsung DEX will also work with the Steam Deck, including the other devices from Uperfect as well as the NexDock and MiraBook
+
+In particular the UDock X Mini is smaller at 11.6" and the UDock X Pro 4K is larger and has a 4k display and detachable keyboard
+https://www.uperfectmonitor.com/products/uperfect-x-mini-lapdock-11-6
+https://www.uperfectmonitor.com/products/uperfect-x-pro-4k-15-6-lapdock
+
+Some further research or testing will be needed to find out where palm rejection actually happens - whether it is a firmware thing in laptops or a software thing in desktop operating systems still missing from Android. It may be a non-issue either with the Steam Deck generally or with the Steam Deck Uperfect dock in particular.
+
+Otherwise, palm rejection gloves used by artists for graphics drawing tablets may help
+https://www.amazon.com/Mixoo-Artists-Gloves-Pack-Rejection/dp/B07Z5SKXPS
 
 ### NVME and power
 
@@ -54,7 +74,9 @@ https://frame.work/products/power-adapter
 
 ### Micro SD card
 
-The SanDisk Extreme 1TB
+The internal storage may be plenty. If not, an extra terabyte can be installed in the microSD slot, and of course SD cards can be swapped beyond that.
+
+The SanDisk Extreme 1TB is the one to get.
 
 https://www.amazon.com/SanDisk-Extreme-microSDXC-Memory-Adapter/dp/B09X7MPX8L/
 
@@ -66,15 +88,28 @@ https://www.amazon.com/Holder-Storage-Organizer-Lightweight-Portable/dp/B07T6SWX
 
 These would be for either/both the big gaming PC and the portable gaming device
 
+### Thunderbolt/USB NVME Adapter
+
+A high end 40GBps USB 4 external NVME enclosure could serve as the root drive for a Windows To Go or Linux desktop installation that could boot on the desktop gaming PC as well as the Steam Deck or any PC.
+
+ORICO M.2 Enclosure for NVMe SSD, USB4.0 40Gbps Type-C to M Key B+M Key 2280 Aluminum External SSD Case Compatible with Thunderbolt 3/4 USB3.2/3.1/3.0/ Type-C-M2V01 
+https://www.amazon.com/ORICO-Enclosure-Compatible-Thunderbolt-Type-C-M2V01/dp/B08R9DMFFT
+
+### Tile
+
+An important portable drive should have a Tile on it in case it gets lost in a couch cushion.
+
+https://www.amazon.com/gp/product/B09B2YYD7W
+
 ### Monitor
 
-If a new monitor is needed get the Gigabyte M32U or M28U
+If a new monitor is needed get the Gigabyte M32U or M28U.
 
 https://www.newegg.com/p/N82E16824012040
 
 These support 144Hz variable refresh rate at 4k and have good brightness, pixel response time, and color accuracy.
 
-The built in KVM will allow the same monitor, keyboard, and mouse to be used for a laptop or portable device when needed, without fiddling with cables or buying a separate KVM that supports the full resolution and refresh rate capabilities.
+The built in KVM will allow the same monitor, keyboard, and mouse to be used for a second device when needed, without fiddling with cables or buying a separate KVM that supports the full resolution and refresh rate capabilities.
 
 ### Additional high capacity storage (SATA)
 
@@ -84,7 +119,7 @@ Seagate 18TB Exos X18 7200 RPM SATA 6Gb/s 256MB Cache 3.5-Inch Enterprise Hard D
 
 https://www.newegg.com/seagate-exos-x18-st18000nm000j-18tb/p/1B4-00VK-00616
 
-If the storage is to be used directly with the Steam Deck, a separate USB 3 drive dock with UASP support and its own power would make sense
+Particularly if the storage is to be used either for backups or directly with the Steam Deck, a separate USB 3 drive dock with UASP support and its own power would make sense.
 
 https://www.amazon.com/Sabrent-External-Docking-Station-EC-UBLB/dp/B075GJ3P3B/
 
@@ -136,6 +171,8 @@ https://www.amazon.com/dp/B08GJC5WSS/
 
 We are looking to build a 4k multi-boot gaming machine that will still be a good rig for a long time. We can't expect to upgrade the CPU very far later on if at all, but we won't be CPU bottlenecked, and we can be aim to be ready to put in an RTX 5070 or 5080 card 2+ years from now, and not need any other changes.
 
+This machine is not to be a show piece, so we don't care at all about RGB or tempered glass, and especially not at the cost of performance.
+
 Generally our parts will correspond with the Exceptional or Enthusiast tiers on Logical Increments, but of course that won't be our only source of info.
 
 https://www.logicalincrements.com/
@@ -144,8 +181,9 @@ The 16 tiers are Destitute, Poor, Minimum, Entry, Modest, Fair, Good, Very Good,
 
 We already have a 4070 Ti GPU and can go for a much larger primary NVME drive, significantly more RAM, better cooling, and more power supply headroom vs. Logical Increments builds at same budget.
 
-
 ## Components
+
+For a gaming rig we'll probably pick parts in dependence order. GPU and CPU first. Then the Motherboard and CPU cooler. Then the RAM and storage. Then the case and power supply. We already have a GPU for this one.
 
 ### CPU
 
@@ -175,13 +213,23 @@ https://www.newegg.com/arctic-cooling-ac-mx4/p/2MB-000S-00016
 
 ### Motherboard
 
-We'll get a popular Z790 chipset motherboard from a reputable brand with a 4+ rating on newegg. Reputable brands today are Asus, Gigabyte, and MSI. I don't believe in ASRock, EVGA, and NZXT today, and definitely not smaller brands.
+We'll get a popular motherboard from a reputable brand with a 4+ rating on newegg, using specifically the Z790 chipset in the case of an Intel 13th gen processor. Reputable brands today are Asus, Gigabyte, and MSI. I don't believe in ASRock, EVGA, and NZXT today, and definitely not smaller brands.
 
-Looking for DDR5 memory slots, at least 3 PCIe 4.0 (or 5.0) M.2 2280 slots, Wi-Fi 6E, 2.5G ethernet, and at least 3 PCI-e slots overall.
+Looking for DDR5 memory slots, at least 3 PCIe 4.0 (or 5.0) M.2 2280 or 22110 slots, Wi-Fi 6E, 2.5G ethernet, and at least 3 PCI-e slots overall.
 
 The MSI MAG Z790 TOMAHAWK has good reviews and is the current best selling Intel board. Has great I/O, 4 M.2 slots, 7 SATA connectors, and some other nice to haves.
 
 https://www.newegg.com/p/N82E16813144567
+
+There is some small temptation to just go MSI for all parts, but they don't make RAM, and other brands make much better coolers, power supplies, and cases.
+
+### Thunderbolt 4 card
+
+- For 40Gbps access to external Thunderbolt/USB4 NVME
+- Also useful for possible future attachment of Thunderbolt dock or Thunderbolt display
+
+MSI THUNDERBOLTM4 8K PCIe 3.0x4 Add-on Card for 2 Thunderbolt 4 (USB-C) Ports
+https://www.newegg.com/p/17Z-00A0-001A5
 
 ### RAM
 
@@ -223,13 +271,21 @@ Plenty of <strong><em>quiet</em></strong>, quality 120mm and/or 140mm fans from 
 
 Probably we will top mount our AIO radiator, fill out the front and back of our case Enthoo case, and leave the bottom without fans.
 
-Noctua NF-A14 PWM, Premium Quiet Fan, 4-Pin (140mm, Brown)
+4x Noctua NF-A14 PWM, Premium Quiet Fan, 4-Pin (140mm, Brown)
 
 https://www.newegg.com/noctua-nf-a14-pwm-case-fan/p/N82E16835608044
 
 ### Power Suppply
 
-CORSAIR RMx Series (2021) RM1000x CP-9020201-NA 1000 W ATX12V / EPS12V SLI Ready CrossFire Ready 80 PLUS GOLD Certified Full Modular Active PFC Power Supply
+https://cultists.network/140/psu-tier-list/
 
-https://www.newegg.com/corsair-rmx-series-rm1000x-cp-9020201-na-1000w/p/N82E16817139273?
+CORSAIR RMx Shift Series RM1200x
 
+https://www.newegg.com/corsair-rm1200x-shift-cp-9020254-na-1200w/p/N82E16817139304
+
+- 1200 watts
+- Supports ATX 3.0, 12VHPWR
+- The good capacitors
+- 10 year warranty
+- Considered quiet
+- 4.7/5 overall rating
