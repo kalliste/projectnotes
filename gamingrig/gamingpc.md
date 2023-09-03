@@ -62,7 +62,7 @@ Linus Tech Tips Deskpad
 
 https://www.lttstore.com/collections/accessories?filter.p.m.filter.gear_type=Deskpad
 
-# Components
+## Components
 
 ### CPU
 
