@@ -1,3 +1,57 @@
+# Portable gaming
+
+Since the release of the Steam Deck, we have started to see competing devices in the same space such as the ROG Ally.
+
+The Steam Deck is still probably the best choice
+
+- There is a large library of games specifically targeting running well on this particular device
+- The SteamOS software provides a great, reliable, clean, seamless experience for gaming
+- Good battery life
+- Good build quality
+- It can still dual boot into windows (or anything)
+- Very repairable, and even possible to do some upgrades
+
+If the Steam Deck will primarily be used docked, and a separate upgraded NVME storage device will be purchased, get the base model Steam Deck for $399
+
+https://store.steampowered.com/steamdeck/
+
+The carrying case that comes with the base model is functionally identical to the one from the 512GB model - the difference is purely external, aesthetic, and minor.
+
+However, if the Steam Deck will sometimes be used alone as an undocked portable gaming device, it may still be worth going to the $649 model for the premium anti-glare screen.
+
+There are 3rd party screens available, but not recommending those today. The other features of the 512GB model are entirely inconsequential.
+
+### Dock
+
+MOKIN Dual Monitor Docking station - supports both DisplayPort and HDMI Output
+(Only if the device will have a dedicated monitor)
+https://www.amazon.com/dp/B0BZV94FSF/
+
+If the device will be plugged into a Gigabyte M28U or M32U monitor with built-in KVM, one of the devices must be connected via USB-C, and it won't be the desktop.
+
+Instead get a simple stand for the Steam Deck, and a high quality USB-C cable (important in this case - the monitor is picky about usb-c cables)
+
+KUNSLUCK Stand
+https://www.amazon.com/Stand-Valve-Steam-Anti-Slip-Silicone/dp/B09TW292LK
+
+Kytok Stand
+https://www.amazon.com/Kytok-Adapters-Anti-Slip-Accessories-Compatible/dp/B0BLY5Y386/
+
+The Plugable Thunderbolt 4 cable has been working great for me, while some others did not
+
+Plugable Thunderbolt 4 Cable - 1m (they also offer a 2m)
+https://www.amazon.com/gp/product/B09C2Y9VQ6/
+
+### NVME and power
+
+Framework has a 2TB NVME for the Steam Deck
+
+https://frame.work/products/western-digital-sn740-nvme-m-2-2230
+
+The Framework power supply is also a great power supply if you are using a Steam Deck dock. The M28U or M32U monitor will provide power over usb-c, so no need in that case.
+
+https://frame.work/products/power-adapter
+
 # Gaming PC
 
 ## Overview
@@ -61,6 +115,18 @@ Alternatively, the LTT Deskpad is just the right thickness and is available in a
 Linus Tech Tips Deskpad
 
 https://www.lttstore.com/collections/accessories?filter.p.m.filter.gear_type=Deskpad
+
+### Joystick
+
+We're not aiming to do console games for this one - neither retro console games nor modern PC ports. Otherwise a Sony DualShock 4 controller would be good to have.
+
+In this case, just a hand held joystick or possibly an arcade stick for playing Amiga and C64 games.
+
+Retro Games The C64 USB Joystick for PC
+https://www.amazon.com/Retro-Games-Joystick-not-machine-specific/dp/B07H25X279
+
+8Bitdo Arcade Stick
+https://www.amazon.com/dp/B08GJC5WSS/
 
 ## Components
 
@@ -150,12 +216,3 @@ CORSAIR RMx Series (2021) RM1000x CP-9020201-NA 1000 W ATX12V / EPS12V SLI Ready
 
 https://www.newegg.com/corsair-rmx-series-rm1000x-cp-9020201-na-1000w/p/N82E16817139273?
 
-# Portable gaming
-
-https://frame.work/products/western-digital-sn740-nvme-m-2-2230
-
-https://frame.work/products/power-adapter
-
-### Dock
-
-https://www.amazon.com/dp/B0BZV94FSF/
