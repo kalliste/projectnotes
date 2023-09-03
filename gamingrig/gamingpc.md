@@ -62,21 +62,6 @@ In the case of multiple micro SD cards, a slim holder may be useful
 
 https://www.amazon.com/Holder-Storage-Organizer-Lightweight-Portable/dp/B07T6SWXK5
 
-
-# Gaming PC
-
-## Overview
-
-We are looking to build a 4k multi-boot gaming machine that will still be a good rig for a long time. We can't expect to upgrade the CPU very far later on if at all, but we won't be CPU bottlenecked, and we can be aim to be ready to put in an RTX 5070 or 5080 card 2+ years from now, and not need any other changes.
-
-Generally our parts will correspond with the Exceptional or Enthusiast tiers on Logical Increments, but of course that won't be our only source of info.
-
-https://www.logicalincrements.com/
-
-The 16 tiers are Destitute, Poor, Minimum, Entry, Modest, Fair, Good, Very Good, Great, Superb, Excellent, Outstanding, Exceptional, Enthusiast, Extremist, and Monstrous. 
-
-We already have a 4070 Ti GPU and can go for a much larger primary NVME drive, significantly more RAM, better cooling, and more power supply headroom vs. Logical Increments builds at same budget.
-
 ## Accessories and Peripherals
 
 ### Monitor
@@ -87,7 +72,7 @@ https://www.newegg.com/p/N82E16824012040
 
 These support 144Hz variable refresh rate at 4k and have good brightness, pixel response time, and color accuracy.
 
-The built in KVM will allow the same monitor, keyboard, and mouse to be used for a laptop or portable device when needed, without fiddling with cables or buying a separate rare expensive KVM that supports the full resolution and refresh rate capabilities.
+The built in KVM will allow the same monitor, keyboard, and mouse to be used for a laptop or portable device when needed, without fiddling with cables or buying a separate KVM that supports the full resolution and refresh rate capabilities.
 
 ### Additional storage (SATA)
 
@@ -138,6 +123,21 @@ https://www.amazon.com/Retro-Games-Joystick-not-machine-specific/dp/B07H25X279
 
 8Bitdo Arcade Stick
 https://www.amazon.com/dp/B08GJC5WSS/
+
+# Gaming PC
+
+## Overview
+
+We are looking to build a 4k multi-boot gaming machine that will still be a good rig for a long time. We can't expect to upgrade the CPU very far later on if at all, but we won't be CPU bottlenecked, and we can be aim to be ready to put in an RTX 5070 or 5080 card 2+ years from now, and not need any other changes.
+
+Generally our parts will correspond with the Exceptional or Enthusiast tiers on Logical Increments, but of course that won't be our only source of info.
+
+https://www.logicalincrements.com/
+
+The 16 tiers are Destitute, Poor, Minimum, Entry, Modest, Fair, Good, Very Good, Great, Superb, Excellent, Outstanding, Exceptional, Enthusiast, Extremist, and Monstrous. 
+
+We already have a 4070 Ti GPU and can go for a much larger primary NVME drive, significantly more RAM, better cooling, and more power supply headroom vs. Logical Increments builds at same budget.
+
 
 ## Components
 
