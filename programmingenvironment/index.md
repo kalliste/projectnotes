@@ -25,6 +25,8 @@ If you have any doubt at all about the above statements, here's a pile of YouTub
 
 ["Inventing on Principle" by Bret Victor](https://youtu.be/PUv66718DII)
 
+["Bret Victor - Media for Thinking the Unthinkable"](https://youtu.be/oUaOucZRlmE)
+
 ["Building a Toolkit for Design" by Matthew Griffith](https://youtu.be/Ie-gqwSHQr0)
 
 ["Making Impossible States Impossible" by Richard Feldman](https://youtu.be/IcgmSRJHu_8)
