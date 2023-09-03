@@ -11,7 +11,7 @@ The Steam Deck is still probably the best choice
 - It can still dual boot into windows (or anything)
 - Very repairable, and even possible to do some upgrades
 
-If the Steam Deck will primarily be used docked, and a separate upgraded NVME storage device will be purchased, get the base model Steam Deck for $399
+If the Steam Deck will primarily be used docked, and a separate upgraded NVME storage upgrade will be purchased, get the base model Steam Deck for $399
 
 https://store.steampowered.com/steamdeck/
 
@@ -19,7 +19,7 @@ The carrying case that comes with the base model is functionally identical to th
 
 However, if the Steam Deck will sometimes be used alone as an undocked portable gaming device, it may still be worth going to the $649 model for the premium anti-glare screen.
 
-There are 3rd party screens available, but not recommending those today. The other features of the 512GB model are entirely inconsequential.
+There are 3rd party screens available, but not recommending those today. The other features of the $649 model are entirely inconsequential.
 
 ### Dock
 
@@ -51,6 +51,17 @@ https://frame.work/products/western-digital-sn740-nvme-m-2-2230
 The Framework power supply is also a great power supply if you are using a Steam Deck dock. The M28U or M32U monitor will provide power over usb-c, so no need in that case.
 
 https://frame.work/products/power-adapter
+
+### Micro SD card
+
+The SanDisk Extreme 1TB
+
+https://www.amazon.com/SanDisk-Extreme-microSDXC-Memory-Adapter/dp/B09X7MPX8L/
+
+In the case of multiple micro SD cards, a slim holder may be useful
+
+https://www.amazon.com/Holder-Storage-Organizer-Lightweight-Portable/dp/B07T6SWXK5
+
 
 # Gaming PC
 
