@@ -62,7 +62,9 @@ In the case of multiple micro SD cards, a slim holder may be useful
 
 https://www.amazon.com/Holder-Storage-Organizer-Lightweight-Portable/dp/B07T6SWXK5
 
-# Accessories and Peripherals (for both systems)
+# Accessories and Peripherals
+
+These would be for either/both the big gaming PC and the portable gaming device
 
 ### Monitor
 
@@ -74,13 +76,17 @@ These support 144Hz variable refresh rate at 4k and have good brightness, pixel 
 
 The built in KVM will allow the same monitor, keyboard, and mouse to be used for a laptop or portable device when needed, without fiddling with cables or buying a separate KVM that supports the full resolution and refresh rate capabilities.
 
-### Additional storage (SATA)
+### Additional high capacity storage (SATA)
 
 Enterprise SATA drives with a 5 year warranty - either Seagate Exos, Western Digital Gold, or Western Digital Ultrastar (formerly HGST Ultrastar)
 
 Seagate 18TB Exos X18 7200 RPM SATA 6Gb/s 256MB Cache 3.5-Inch Enterprise Hard Drive HDD (ST18000NM000J)
 
 https://www.newegg.com/seagate-exos-x18-st18000nm000j-18tb/p/1B4-00VK-00616
+
+If the storage is to be used directly with the Steam Deck, a separate USB 3 drive dock with UASP support and its own power would make sense
+
+https://www.amazon.com/Sabrent-External-Docking-Station-EC-UBLB/dp/B075GJ3P3B/
 
 ### Keyboard
 
