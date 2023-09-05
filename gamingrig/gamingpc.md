@@ -84,6 +84,10 @@ In the case of multiple micro SD cards, a slim holder may be useful
 
 https://www.amazon.com/Holder-Storage-Organizer-Lightweight-Portable/dp/B07T6SWXK5
 
+https://www.reddit.com/r/SteamDeck/comments/vo3hge/complete_table_of_load_times_on_the_steam_deck/
+
+![sd-cards-steam-deck.png](sd-cards-steam-deck.png)
+
 # Accessories and Peripherals
 
 These would be for either/both the big gaming PC and the portable gaming device
@@ -289,3 +293,26 @@ https://www.newegg.com/corsair-rm1200x-shift-cp-9020254-na-1200w/p/N82E168171393
 - 10 year warranty
 - Considered quiet
 - 4.7/5 overall rating
+
+# Software
+
+
+### MX Linux
+
+MX-23_x64 “ahs” for latest hardware support
+
+https://mxlinux.org/download-links/
+
+### MX Workbench
+
+https://mxlinux.org/blog/mx-workbench-2020-released/
+
+
+### Phosh
+
+https://puri.sm/posts/phosh-overview/
+
+
+### Batocera
+
+https://wagnerstechtalk.com/sd-batocera/

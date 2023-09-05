@@ -13,31 +13,45 @@ Coming out of this, the hope and expectation is to finally make some good softwa
 
 # First I must sprinkle you with fairy dust
 
-Your current programming language and development tools are much worse than you think.
+Your current programming language and development tools aren't as good as you think, and are very very far from what they could be.
 
-These languages are obsolete: JavaScript, C#, Go, Java, Objective-C, MATLAB, and C++02.
+If you don't already have a deep appreciation for this, 10 or 15 hours of videos should help get you up to speed.
 
-These are better for now, but are still oh so very far from what programming should be: Kotlin, Swift, Rust, Scala, ReScript, TypeScript, Elixir, Clojure, F#, Elm, Julia, and C++14. Python almost makes the obsolete list but there's no suitable alternative for it yet.
-
-If you have any doubt at all about the above statements, here's a pile of YouTube videos to get you started down the path. I've included them very roughly descending in order of importance and relevance for our efforts. Minimally you should watch at least the first four or five of them.
+Start with "Stop Writing Dead Programs" and maybe watch it again after the others.
 
 ["Stop Writing Dead Programs" by Jack Rusher at Strange Loop 2022](https://youtu.be/8Ab3ArE8W3s)
 
+Bret Victor's talks are important and inspiring. Unfortunately you can't just download the code for the demos he made and build on that.
+
 ["Inventing on Principle" by Bret Victor](https://youtu.be/PUv66718DII)
 
-["Bret Victor - Media for Thinking the Unthinkable"](https://youtu.be/oUaOucZRlmE)
+["Media for Thinking the Unthinkable" by Bret Victor](https://youtu.be/oUaOucZRlmE)
+
+An introduction to Elm-UI will help show the value of the Elm architecture.
 
 ["Building a Toolkit for Design" by Matthew Griffith](https://youtu.be/Ie-gqwSHQr0)
 
 ["Making Impossible States Impossible" by Richard Feldman](https://youtu.be/IcgmSRJHu_8)
 
+["The Edges of Cutting-Edge Languages" by Richard Feldman](https://youtu.be/cpQwtwVKAfU?si=iUJ0-xsQ_O3fs-qO)
+
 ["Functional Programming for Pragmatists" by Richard Feldman at GOTO 2021](https://youtu.be/3n17wHe5wEw)
+
+Also key to have an appreciation of Smalltalk
+
+["Moldable development" by Tudor Gîrba](https://youtu.be/Pot9GnHFOVU)
+
+["What FP can learn from Smalltalk" by Aditya Siram at Lambda World 2018]()
 
 ["The computer revolution hasn't happened yet" by Alan Kay at OOPSLA 1997](https://youtu.be/oKg1hTOQXoY)
 
 [Yesterday's Computer of Tomorrow: The Xerox Alto Smalltalk-76 Demo](https://youtu.be/NqKyHEJe9_w)
 
+Rich Hickey's talks about Clojure and related ideas are very valuable
+
 ["Simple Made Easy" by Rich Hickey (2011)](https://youtu.be/SxdOUGdseq4)
+
+Here's a start on stuff relating to Erlang
 
 ["The Mess We're In" by Joe Armstrong at Strange Loop 2014](https://youtu.be/lKXe3HUG2l4)
 
@@ -54,6 +68,37 @@ If you have any doubt at all about the above statements, here's a pile of YouTub
 ["Object-Oriented Programming is Good*" by Brian Will](https://youtu.be/0iyB0_qPvWk)
 
 ["Clean Coders Hate What Happens to Your Code When You Use These Enterprise Programming Tricks" by Kevlin Henney](https://youtu.be/FyCYva9DhsI)
+
+# The Big Plan
+
+- Implement Roc platform(s)
+- Web/Desktop/Mobile GUI via Iced
+- Actors
+- Layer on braces syntax ala Gleam
+- Unison-lang style normalization
+- Hot reload / live programming
+
+### Libraries
+
+- Polars data frames and data access
+- Datatables UI component
+- New implementation of Grammar of Graphics on Iced
+- Logical diagrams support
+- Images and video via GraphicsMagick and libmpv
+- Web scraping
+
+### Scaffolding
+
+- Wrattler notebooks
+
+### Bonus rounds
+
+- Target and integrate BEAM/OTP
+- xdotool window management integration
+- Additional syntax with Hylo style mutable value semantics support
+- Shaders
+- O3DE or Godot
+- Crypto
 
 # Desired properties
 
@@ -83,7 +128,13 @@ For some examples of moldable environments, see Smalltalk, TiddlyWiki, and Lisp 
 
 # Second Level Principles
 
-## Rust Interoperation
+## Provenance
+
+## Distributed Tracing
+
+## Interoperation
+
+Interested in Rust ecosystem first. Erlang ecosystem for scaling. Python and R for libraries. Maybe we can link through to Python, R, and Julia via Jupyter interface
 
 ## Small
 
@@ -229,6 +280,12 @@ https://github.com/evcxr/evcxr
 
 https://github.com/rust-lang/miri
 
+https://www.reddit.com/r/rust/comments/n2cmvd/there_are_a_lot_of_actor_framework_projects_on/
+
+### Erlang BEAM / OTP
+
+https://news.ycombinator.com/item?id=9907310
+
 ### MiniVM / Paka
 
 https://github.com/FastVM/paka
@@ -312,10 +369,6 @@ https://github.com/rune-rs/rune
 
 https://gleam.run/
 
-## State Charts
-
-https://statecharts.dev/
-
 ## Iced GUI
 
 https://github.com/iced-rs/iced
@@ -327,6 +380,24 @@ https://docs.rs/iced/latest/iced/widget/index.html
 ## Excel
 
 We can implement most of the Excel functions in a package. See [PhpSpreadsheet](https://github.com/PHPOffice/PhpSpreadsheet), for example. This will be a hit.
+
+https://github.com/jiradaherbst/xlformula-engine
+
+## Diagrams
+
+Need to render different kind of diagrams, and it should not look primitive
+
+Maybe follow UML data model?
+
+https://mermaid.js.org
+
+https://statecharts.dev/
+
+https://kroki.io/
+
+http://mermaid.js.org/intro/
+
+Need to research automatic layout -- probably this is <em>hard</em>
 
 ## Data types
 
