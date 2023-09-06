@@ -1,8 +1,67 @@
+
+# Gaming Hardware - Portable and Desktop
+
+<!-- TOC start (generated with https://github.com/derlin/bitdowntoc) -->
+
+- [Portable gaming](#portable-gaming)
+    * [Steam Deck](#steam-deck)
+    * [Other Options](#other-options)
+        + [ROG Ally](#rog-ally)
+        + [Lenovo Legion Go](#lenovo-legion-go)
+        + [GPD Win Mini](#gpd-win-mini)
+        + [GPD Win 4](#gpd-win-4)
+        + [GPD Win Max 2](#gpd-win-max-2)
+        + [GPD Pocket 3](#gpd-pocket-3)
+    * [Mobile Game Device Accessories](#mobile-game-device-accessories)
+        + [Hubs and docks - ROG Ally](#hubs-and-docks---rog-ally)
+        + [Hubs and docks - Steam Deck](#hubs-and-docks---steam-deck)
+        + [Portable monitors](#portable-monitors)
+        + [Lapdock for Mobile](#lapdock-for-mobile)
+        + [NVME and power](#nvme-and-power)
+        + [Micro SD card](#micro-sd-card)
+
+
+- [Accessories and Peripherals](#accessories-and-peripherals)
+    + [Thunderbolt/USB NVME Adapter](#thunderboltusb-nvme-adapter)
+    + [Tile](#tile)
+    + [Monitor](#monitor)
+    + [Additional high capacity storage (SATA)](#additional-high-capacity-storage-sata)
+    + [Keyboard](#keyboard)
+    + [Mouse](#mouse)
+    + [Mouse Pad or Desk Pad](#mouse-pad-or-desk-pad)
+    + [Joystick](#joystick)
+
+
+- [Gaming PC](#gaming-pc)
+    * [Overview](#overview)
+    * [Components](#components)
+        + [CPU](#cpu)
+        + [CPU Cooler](#cpu-cooler)
+        + [Thermal Compound](#thermal-compound)
+        + [Motherboard](#motherboard)
+        + [Thunderbolt 4 card](#thunderbolt-4-card)
+        + [RAM](#ram)
+        + [SSD](#ssd)
+        + [Case](#case)
+        + [Case Fans](#case-fans)
+        + [Power Suppply](#power-suppply)
+
+
+- [Software](#software)
+    + [MX Linux](#mx-linux)
+    + [MX Workbench](#mx-workbench)
+    + [Phosh](#phosh)
+    + [Batocera](#batocera)
+
+<!-- TOC end -->
+
 # Portable gaming
+
+## Steam Deck
 
 Since the release of the Steam Deck, we have started to see competing devices in the same space such as the ROG Ally.
 
-The Steam Deck is still probably the best choice
+The Steam Deck may still be the best choice
 
 - There is a large library of games specifically targeting running well on this particular device
 - The SteamOS software provides a great, reliable, clean, seamless experience for gaming
@@ -13,6 +72,8 @@ The Steam Deck is still probably the best choice
 
 If the Steam Deck will primarily be used docked, and a separate upgraded NVME storage upgrade will be purchased, get the base model Steam Deck for $399
 
+At this time, 2TB is the max capacity third party storage upgrade for the internal storage. It can also use microSD cards - 1TB cards are easy to find, and 1.5TB cards are starting to appear. 2TB cards are expected before long. Expect longer load times from microSD storage, but all games should function fine when loaded this way.
+
 https://store.steampowered.com/steamdeck/
 
 The carrying case that comes with the base model is functionally identical to the one from the 512GB model - the difference is purely external, aesthetic, and minor.
@@ -21,31 +82,159 @@ However, if the Steam Deck will sometimes be used alone as an undocked portable 
 
 There are 3rd party screens available, but not recommending those today. The other features of the $649 model are entirely inconsequential.
 
-### Dock for home / office 
+## Other Options
 
-A full docking station makes sense but only if it will using a dedicated monitojr, or if a separate (recent, high end) KVM device will be purchased.
+There are actually a ton of options now, and more coming. The available [ROG Ally](#rog-ally) and upcoming [Lenovo Legion Go](#lenovo-legion-go) in particular are notable, and Ayaneo should have a good device by year end 2023.
 
-MOKIN Dual Monitor Docking station - supports both DisplayPort and HDMI Output
-https://www.amazon.com/dp/B0BZV94FSF/
+Currently the best options other than the Steam Deck seem to be the [GPD Win 4](#gpd-win-4) and [GPD Win Max 2](#gpd-win-max-2)
 
-If the device will share a monitor with the full size PC and be plugged into a Gigabyte M28U or M32U monitor with built-in KVM, one of the devices must be connected via USB-C, and it probably won't be the desktop.
+The GPD devices have a lot going for them, and they have a couple different size options.
 
-Instead, get a simple stand for the Steam Deck, and a high quality USB-C cable (important in this case - the monitor is picky about usb-c cables)
+https://www.custompc.com/lenovo/legion-go-release-date-specs-price
 
-KUNSLUCK Stand
-https://www.amazon.com/Stand-Valve-Steam-Anti-Slip-Silicone/dp/B09TW292LK
+https://1drv.ms/x/s!Ai6e5DDA76ldyCBxQttYwNWsEpEg?e=5UNyoh
 
-Kytok Stand
-https://www.amazon.com/Kytok-Adapters-Anti-Slip-Accessories-Compatible/dp/B0BLY5Y386/
+### ROG Ally
+https://rog.asus.com/gaming-handhelds/rog-ally/rog-ally-2023/
+
+The ROG Ally makes the most sense if you are committed to not owning a separate gaming PC but still have the budget for one. In that case you can buy one their proprietary connector external GPUs for it at a premium.
+
+### Lenovo Legion Go
+
+Big 10" screen, detachable controllers
+
+Releases in October 2023
+
+Custom model AMD chip - not clear what the performance will be yet.
+
+https://www.lenovo.com/us/en/legiongo/
+
+https://www.tomsguide.com/news/lenovo-legion-go
+
+This one has Thunderbolt 4, so if you already have a discrete GPU available, it could be a full desktop replacement candidate. Not as good a candidate for this as the GPD devices.
+
+The only good options for the GPU enclosure appear to be the Razer Core X or Core X Chroma. The Sonnet eGPU is limited to 2 slot width. Both the Core X and Core X Chroma support a 3 slot width GPU. The Core X Chroma has downstream USB supports, avoiding the need for a separate USB hub or dock.
+
+However only the following specific models of the 4070 Ti GPU are expected to fit within the 3 slot width of the Razer eGPU enclosures:
+
+- ASUS ProArt GeForce RTX 4070 Ti RTX4070TI-12G
+- ASUS ProArt GeForce RTX 4070 Ti 12GB OC Edition PROART-RTX4070TI-O12G
+- GIGABYTE GeForce RTX 4070 Ti WINDFORCE OC 12G GV-N407TWF3OC-12GD
+- GIGABYTE GeForce RTX 4070 Ti EAGLE OC (rev. 2.0) GV-N407TEAGLE OC-12GD Rev2.0
+- GIGABYTE GeForce RTX 4070 Ti GAMING OC V2 GV-N407TGAMING
+- GIGABYTE AERO GeForce RTX 4070 Ti GV-N407TAERO OCV2-12GD
+- ZOTAC GAMING GeForce RTX 4070 Ti Trinity OC ZT-D40710J-10P
+
+Meanwhile 8 cards from Asus, Zotac, and PNY are too wide, and another 15 models are unknown status.
+
+### GPD Win Mini
+
+Probably only if you really like the physical layout for some reason - otherwise go for the Win 4 or Win Max 2
+
+- 7" screen, light at 520 grams
+- USB4 and Oculink
+- 30mm m.2 slot like Steam Deck
+- Up to 32GB of RAM
+- microSD
+- keyboard forward and always visible
+
+https://gpd.hk/gpdwinminisdfewr
+
+### GPD Win 4
+- 6" screen, 600 grams
+- 2280 M.2 slot
+- Oculink and USB4, 1x full-featured USB-c 10Gpbs
+- Up to 64GB of RAM
+- microSD
+- Sliding keyboard, side game controls
+- Dock available
+- Cellular available via addon that attaches to back
+
+https://gpd.hk/gpdwin4
+
+### GPD Win Max 2
+- 10.1", 1005 grams is still smaller and lighter than anything called a laptop
+- 2280 and 2230 M.2 slots
+- Up to 64GB RAM
+- Both SD and microSD
+- Cellular support available (probably in 2230 slot)
+- Oculink and USB4, 1x full-featured USB-c 10Gpbs, 5Gbps USB-A
+
+https://gpd.hk/gpdwinmax2
+
+### GPD Pocket 3
+
+Cool as a work tool or mounted controller for industry. Not for gaming.
+
+- 8", 700 grams
+- Not for gaming, but does have fast ethernet and wifi, and Thunderbolt 4
+- Can be display and keyboard for other devices
+- RS-232 serial port
+- IR camera
+- Fingerprint sensor
+- Stylus
+
+https://gpd.hk/gpdpocket3
+
+## Mobile Game Device Accessories
+
+### Hubs and docks - GPD Win 4
+
+In addition to the official dock and eGPU, any normal GPU can be used via Oculink with some additional bits starting at $220 + a power supply
+
+https://smallformfactor.net/forum/threads/one-dock-unique-dual-port-egpu-dock-thunderbolt-oculink-m-2-0-26l.18337/
+
+This is a custom thing for now, but should be available off the shelf before long
+
+### Hubs and docks - ROG Ally
+
+The XG Mobile GC32 at $800 is comparable to an RTX 3060 and is certainly VR capable. Expect great 1080p gaming, and maybe 2k
+
+The XG Mobile GC33 at $2000 is a silly thing - maybe buy an entire desktop gaming rig instead. It does let you do 4k gaming on high settings but in this form factor, good cooling is not possible. The fan noise has been measured to reach at least 70 decibels in some demanding games, which is similar to a typical washing machine.
+
+### Hubs and docks - Steam Deck
+
+A full docking station makes sense but only if it will be using a dedicated monitor, or if a separate (recent, high end) KVM device will be purchased.
+
+The JSAUX hub stands out as it attachable to the JSAUX ModCase, and the ModCase has a built-in stand.
+
+https://www.amazon.com/JSAUX-PC0104-Detachable-Accessories-Protective/dp/B0BXPNZWWF
+https://www.amazon.com/JSAUX-Docking-Ethernet-Compatible-Ally-HB1101/dp/B0C24D98VV
+
+Best used in combination with the JSAUX case.
+
+https://www.amazon.com/gp/product/B0BRK96DJX/
+
+They also have a good docking station
+https://www.amazon.com/JSAUX-Compatible-DisplayPort-Ethernet-Deck-HB0702/dp/B0BJKBS1QS/
 
 The Plugable Thunderbolt 4 cable has been working great for me, while some others did not
 
 Plugable Thunderbolt 4 Cable - 1m (they also offer a 2m)
 https://www.amazon.com/gp/product/B09C2Y9VQ6/
 
+Guide to hubs and docks:
+https://dancharblog.wordpress.com/2021/02/05/usb4-tb4-docks/
+
+### Portable monitors
+
+This IOGEAR dock supports multiple USB-C monitors, but that only matters if you will be using usb-c portable monitors.
+
+IOGEAR Dock Pro USB4 8K Triple View
+https://www.amazon.com/gp/product/B0BLD2BQ7T
+
+The Uperfect Unify y is a good option for portable monitor - either the 15.6 touch or 17.3" non-touch
+https://www.uperfectmonitor.com/collections/touch-screen/products/uperfect-y-vertical-monitor-15-6?variant=39456049397832
+
+They also have an 18.5"
+https://www.uperfectmonitor.com/collections/portable-monitors/products/18-inch-monitor-hdmi
+
+Any of these should work with their stand, which seems to be probably the best stand for portable monitors, if you want to elevate them above the table.
+https://www.uperfectmonitor.com/products/monitor-holder-laptop-stand
+
 ### Lapdock for Mobile
 
-This can be useful if you want to work with Word and Excel files or e-mail from a hotel room, coffee shop, plane, or other place where a monitor, keyboard, and mouse are not available.
+This could be useful if you want to work with Word and Excel files or e-mail from a hotel room, coffee shop, plane, or other place where a monitor, keyboard, and mouse are not available. However, it's not clear that any of the available devices are any good.
 
 Uperfect has one specifically intended for use with the Steam Deck
 
@@ -57,10 +246,23 @@ In particular the UDock X Mini is smaller at 11.6" and the UDock X Pro 4K is lar
 https://www.uperfectmonitor.com/products/uperfect-x-mini-lapdock-11-6
 https://www.uperfectmonitor.com/products/uperfect-x-pro-4k-15-6-lapdock
 
-Some further research or testing will be needed to find out where palm rejection actually happens - whether it is a firmware thing in laptops or a software thing in desktop operating systems still missing from Android. It may be a non-issue either with the Steam Deck generally or with the Steam Deck Uperfect dock in particular.
+People are reporting less than great experiences.
 
-Otherwise, palm rejection gloves used by artists for graphics drawing tablets may help
+https://www.reddit.com/r/SteamDeck/comments/12nopcj/uperfect_x_156_lapdock_2022_review_from_a/
+
+Also, the lack of a hinge on the 4k 15" device means you cant actually use it in your lap and must instead use the stand.
+
+Apparently the NexDock does not report itself to the host machine as a touchpad and provide pressure information but instead pretends to be a simple mouse, which means the OS isn't set up to do its own palm rejection.
+
+https://www.reddit.com/r/NexDock/comments/jfq3cb/why_that_dang_touchpad_is_so_weird_and_why_you/
+
+Some Redditors suggest that for devices that do appear as a trackpad, you may have a better experience and Linux and Windows than with Samsung DEX.
+
+https://www.reddit.com/r/lapdock/comments/124wcxw/lapdocks_with_real_trackpads/
+
+Palm rejection gloves exist, but no-one wants to put on gloves to use a computer.
 https://www.amazon.com/Mixoo-Artists-Gloves-Pack-Rejection/dp/B07Z5SKXPS
+
 
 ### NVME and power
 

@@ -57,6 +57,10 @@ Here's a start on stuff relating to Erlang
 
 ["Systems that run forever self-heal and scale" by Joe Armstrong (2013)](https://youtu.be/cNICGEwmXLU)
 
+["Erlang - software for a concurrent world" by Joe Armstrong](https://www.infoq.com/presentations/erlang-software-for-a-concurrent-world/)
+
+[Joe Armstrong's various talks](https://www.youtube.com/playlist?list=PLvL2NEhYV4ZsIjT55t-kxylCU0BRlQjpl)
+
 ["We Really Don't Know How to Compute!" - Gerald Sussman (2011)](https://youtu.be/HB5TrK7A4pI)
 
 ["Programming’s Greatest Mistakes - Mark Rendle - NDC Copenhagen 2022"](https://youtu.be/qC_ioJQpv4E)
@@ -155,6 +159,12 @@ The compiler, debugger, and editor are not separate programs. They are facilitie
 ## Message passing
 
 ## Syntax
+
+Worth looking at Raku for good ideas:
+
+["Raku syntax I miss in other languages" by Leon Timmermans](https://www.youtube.com/live/elalwvfmYgk)
+
+But pick carefully! Don't be Perl
 
 ### Do use curly brackets
 
@@ -281,6 +291,17 @@ https://github.com/evcxr/evcxr
 https://github.com/rust-lang/miri
 
 https://www.reddit.com/r/rust/comments/n2cmvd/there_are_a_lot_of_actor_framework_projects_on/
+
+### Rust excvr
+
+The evcxr rust evaluation context has a REPL and Jupyter kernel for Rust
+
+How does it work?
+
+Analyze your code looking for variable declarations. Put a wrapper around it and write it (to disk!) as a dll. Load the dll and call the function, marshalling data in and out via a HashMap.
+
+https://github.com/evcxr/evcxr/blob/main/evcxr/HOW_IT_WORKS.md
+
 
 ### Erlang BEAM / OTP
 
@@ -489,17 +510,28 @@ Use GraphicsMagick
 
 "Regarding the fact that I regret adding threads to the language because they are too difficult to use correctly, I don't want to add yet another variation of threads." - Yukihiro Matsumoto
 
-https://levelup.gitconnected.com/top-45-programming-quotes-24ebad417241
+"Simple things should be simple, complex things should be possible." - Alan Kay
+
+> Perl is a language for getting your job done.
+> 
+> Of course, if your job is programming, you can get your job done with any "complete" computer language, theoretically speaking. But we know from experience that computer languages differ not so much in what they make possible, but in what they make easy. At one extreme, the so-called "fourth generation languages" make it easy to do some things, but nearly impossible to do other things. At the other extreme, certain well known, "industrial-strength" languages make it equally difficult to do almost everything.
+> 
+> Perl is different. In a nutshell, Perl is designed to make the easy jobs easy, without making the hard jobs impossible.
+> 
+> Programming Perl, 2nd Edition (1996), by Larry Wall, Tom Christiansen and Randal Schwartz
+
+
+Below quotes found at https://levelup.gitconnected.com/top-45-programming-quotes-24ebad417241
 
 "You cannot manage that which you cannot measure" - James Barksdale, CEO of Netscape 
-
-"Measuring programming progress by lines of code is like measuring aircraft building progress by weight" - Bill Gates 
 
 "Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it" - Brian Kernighan 
 
 "If debugging is the process of removing software bugs, then programming must be the process of putting them in" - Edsger W. Dijkstra 
 
 "Hiring bad developers is like drinking seawater. It seems to satisfy a need while actually increasing it" - Michael T. Nygard 
+
+"Measuring programming progress by lines of code is like measuring aircraft building progress by weight" - Bill Gates
 
 "It should be noted that no ethically-trained software engineer would ever consent to write a DestroyBaghdad procedure. Basic professional ethics would instead require him to write a DestroyCity procedure, to which Baghdad could be given as a parameter" - Nathaniel S. Borenstein 
 
@@ -716,6 +748,8 @@ https://capnproto.org/
 ## Actor model 
 
 https://www.bastion-rs.com/
+
+https://docs.rs/agnostik/latest/agnostik/
 
 
 # Gui
