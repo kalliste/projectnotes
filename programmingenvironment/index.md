@@ -3,6 +3,24 @@
 
 # Background
 
+> There is in Melbourne a man who probably knows more about poisonous snakes than anyone else on earth. his name is Dr Struan Sutherland, and he has devoted his entire life to a study of venom.
+> 
+> ‘And I’m bored with it,’ he said when we went along to see him the next morning. ‘Can’t stand all these poisonous creatures, all these snakes and insects and fish and things. Stupid things, biting everybody. And then people expect me to tell them what to do about it. I’ll tell them what to do. Don’t get bitten in the first place. That’s the answer. I’ve had enough of it. Hydroponics, now, that’s interesting. Talk to you all you like about hydroponics. Fascinating stuff, growing plants artificially in water, very interesting technique. We’ll need to know all about it if we’re go to Mars and places. Where did you say you were going?’
+> 
+> ‘Komodo’
+> 
+> ‘Well, don’t get bitten, that’s all I can say. And don’t come running to me if you do because you won’t get here in time and anyway I’ll probably be out. Hate this office, look at it. Full of poisonous animals all over the place. Look at this tank, it’s full of fire ants. Poisonous. Bored silly with them. Anyway, I got some little cakes in in case you were hungry. Would you like some little cakes? I can’t remember where I put them. There’s some tea but it’s not very good. Sit down for heaven’s sake.
+> 
+> ‘So, you’re going to Komodo. Well, I don’t know why you want to do that, but I suppose you have your reasons. There are fifteen different types of snakes on Komodo, and half of them are poisonous. The only potentially deadly ones are the Russell’s viper, the bamboo viper, and the Indian cobra.
+> 
+> ‘The Indian cobra is the fifteenth deadliest snake in the world, and all the other fourteen are here in Australia. That’s why it’s so hard for me to find time to get on with my hydroponics, with all these snakes all over the place.
+> 
+> - Douglas Adams, "Last Chance To See"
+
+There are so very many things we could do with good software tools, and the lack of them is holding us back.
+
+Let us fix this and get back to doing those more exciting things. Like hydroponics.
+
 Starting in 2022, dissatisfied with the state of my tools, I jumped into a very deep dive exploring the landscape, history, and status of programming languages, programming language design, and software development environments, methods, and tools.
 
 In this document I am assembling some notes about this research and collecting the results of that deep dive into something more of a coherent vision.
@@ -15,7 +33,7 @@ Coming out of this, the hope and expectation is to finally make some good softwa
 
 Your current programming language and development tools aren't as good as you think, and are very very far from what they could be.
 
-If you don't already have a deep appreciation for this, 10 or 15 hours of videos should help get you up to speed.
+If you don't already have a deep appreciation for this, 10 or 15 hours of videos should help get you caught up.
 
 Start with "Stop Writing Dead Programs" and maybe watch it again after the others.
 
@@ -61,9 +79,13 @@ Here's a start on stuff relating to Erlang
 
 [Joe Armstrong's various talks](https://www.youtube.com/playlist?list=PLvL2NEhYV4ZsIjT55t-kxylCU0BRlQjpl)
 
+This is the Sussman talk referenced in "Stop writing dead programs" where he talks about propagators, among other things.
+
 ["We Really Don't Know How to Compute!" - Gerald Sussman (2011)](https://youtu.be/HB5TrK7A4pI)
 
 ["Programming’s Greatest Mistakes - Mark Rendle - NDC Copenhagen 2022"](https://youtu.be/qC_ioJQpv4E)
+
+Let Brian Will talk shit about the dominant paradigm to you for a minute, it's good for you.
 
 ["Object-Oriented Programming is Bad" by Brian Will](https://youtu.be/QM1iUe6IofM)
 
@@ -73,12 +95,37 @@ Here's a start on stuff relating to Erlang
 
 ["Clean Coders Hate What Happens to Your Code When You Use These Enterprise Programming Tricks" by Kevlin Henney](https://youtu.be/FyCYva9DhsI)
 
+
+# What it looks like
+
+We build our system in a few layers.
+
+The base layer is mostly Rust and as much as possible, it's existing libraries. At this layer we would like things like fast parsing and direct access to some native libraries. One central piece though is a good actor framework that lets us message across processes that may be on separate machines but which operates more efficiently if they happen to have access to "shared memory".
+
+The next layer is Roc. Our Roc platform provides functional/immutable interface ports to the underlying facilities in Rust. Inside the Roc environment we are no longer thinking about a lot of the implementation details that are handled by the platform code in Rust. Concerns about things like threads, locks, memory management, and memory layout are isolated to the layer below until we find specific use cases for exposing them.
+
+It would be nice if our Roc platform could do incremental compilation and hot reload of Roc code. If not, we build that in the layer down and expose it for the layer up. Or else, if we can efficiently call natively compiled Roc from WASM Roc, and we can hot load WASM, then we don't need to make our own bytecode.
+
+At the next (top?) layer we have a language that isn't exactly the Gleam programming language, but it resembles Gleam. It's Gleam-ish. Gleamish is a small, easy, statically typed, functional programming language with a familiar curly brackets syntax. Gleamish is multi-representational. You don't even have to see the code when you don't want to - we represent it visually for tasks where you want to get the big picture quickly.
+
+Gleamish is just functions. We don't write complicated state machines in Gleamish text syntax - we build state charts. We have charts for other things as well. Each domain we are working with is represented declaratively in text and has a visual representation. Where possible, either can be used. Neither the text nor the visual interface are the definitive copy. They are both rendered from a data structure that can represent them both, and changes are brokered between them in Elm Model-View-Update fashion.
+
+### Why these layers?
+
+It can be great to have everything in one language.
+
+We want some things to be fast and efficient and we want access to native libraries. We need a systems programming language, and today that's Rust.
+
+Rust wants to be a systems programming language. We can abstract details away with macros, but it would be painful to build and maintain a full system of macros that takes us where we are going.
+
+Roc is closer. It's an applications programming language with niceties like automatic memory management. But the Roc compiler is focused on turning Roc into efficient native code artifacts. That's not our top goal with Gleamish. Gleamish is about live molding. We need it to run fairly fast sometimes, but it's not the most important concern, and sometimes we want to run our Gleamish code slow. We want to get all up in its business and watch it work. You can step through any language's execution in a debugger but that's not the primary use case for most languages. Our Gleamish tools will be focused on things like molding, debugging, tracing, and visualizing the activity and behavior of the system we are building. These concerns aren't necessarily in complete opposition to the things Roc cares about, but we can benefit from separating them. It also means our Gleamish syntax can be what we want it to be to fit our other goals and needs.
+
 # The Big Plan
 
 - Implement Roc platform(s)
 - Web/Desktop/Mobile GUI via Iced
 - Actors
-- Layer on braces syntax ala Gleam
+- Layer on a braces syntax ala Gleam
 - Unison-lang style normalization
 - Hot reload / live programming
 
@@ -89,11 +136,11 @@ Here's a start on stuff relating to Erlang
 - New implementation of Grammar of Graphics on Iced
 - Logical diagrams support
 - Images and video via GraphicsMagick and libmpv
-- Web scraping
+- Web communications / web scraping
 
 ### Scaffolding
 
-- Wrattler notebooks
+- Wrattler notebooks. Maybe.
 
 ### Bonus rounds
 
@@ -101,8 +148,10 @@ Here's a start on stuff relating to Erlang
 - xdotool window management integration
 - Additional syntax with Hylo style mutable value semantics support
 - Shaders
-- O3DE or Godot
-- Crypto
+- O3DE or Godot. OpenXR.
+- More Crypto
+- LLM comment sync maintenance
+- Voice interface
 
 # Desired properties
 
@@ -116,11 +165,17 @@ For some examples of moldable environments, see Smalltalk, TiddlyWiki, and Lisp 
 
 ## Transparent
 
-- High-level
-- Literate
-- Introspectable
-- Multi-Representational
-- Reproducible
+### High-level
+### Layered
+### Literate
+### Introspectable
+### Multi-Representational
+
+Broke: textual, no-code
+Woke: low-code
+Bespoke: multi-representational
+
+### Reproducible
 
 ## Live
 
@@ -147,6 +202,8 @@ Interested in Rust ecosystem first. Erlang ecosystem for scaling. Python and R f
 ## Batteries Included
 
 ## Greedy
+
+## For Pirates
 
 # Design Decisions
 
@@ -188,7 +245,7 @@ JavaScript tries and fails. JavaScript isn't semicolon-free, it has automatic se
 
 ### Tabs are invalid
 
-Every character in the syntax must be visually distinct. Tabs are not source code. Elm got this right. Instead of allowing tabs, make sure the tools are set up to present the code with different amounts of spaces.
+Every character in the syntax must be visually distinct. Tabs are not source code. Elm got this right. Instead of allowing tabs, make sure the tools are set up to present the code with different amounts of spaces. We can live without 1 character is 1 byte, but should be able to 
 
 ### Comparison and assignment
 
@@ -291,6 +348,18 @@ https://github.com/evcxr/evcxr
 https://github.com/rust-lang/miri
 
 https://www.reddit.com/r/rust/comments/n2cmvd/there_are_a_lot_of_actor_framework_projects_on/
+
+### LiveCode
+
+A modern cross-platform HyperCard
+
+https://en.wikipedia.org/wiki/LiveCode_(company)
+
+### Light Table
+
+http://lighttable.com/
+
+Shows debug out with the code that made it
 
 ### Rust excvr
 
@@ -507,6 +576,8 @@ Use GraphicsMagick
 ### Some great quotes
 
 "Any sufficiently complicated C or Fortran program contains an ad hoc, informally-specified, bug-ridden, slow implementation of half of Common Lisp." - Greenspun's tenth rule
+
+"All non-trivial abstractions, to some degree, are leaky." - Joel Sapolsky's Law of Leaky Abstractions
 
 "Regarding the fact that I regret adding threads to the language because they are too difficult to use correctly, I don't want to add yet another variation of threads." - Yukihiro Matsumoto
 

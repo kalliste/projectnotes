@@ -97,6 +97,8 @@ https://1drv.ms/x/s!Ai6e5DDA76ldyCBxQttYwNWsEpEg?e=5UNyoh
 ### ROG Ally
 https://rog.asus.com/gaming-handhelds/rog-ally/rog-ally-2023/
 
+Not recommended at this time. Hardware defects, problems with destroying microSD cards.
+
 The ROG Ally makes the most sense if you are committed to not owning a separate gaming PC but still have the budget for one. In that case you can buy one their proprietary connector external GPUs for it at a premium.
 
 ### Lenovo Legion Go
@@ -250,7 +252,7 @@ People are reporting less than great experiences.
 
 https://www.reddit.com/r/SteamDeck/comments/12nopcj/uperfect_x_156_lapdock_2022_review_from_a/
 
-Also, the lack of a hinge on the 4k 15" device means you cant actually use it in your lap and must instead use the stand.
+Also, the lack of a hinge on the 4k 15" device means you can't actually use it in your lap and must instead use the stand.
 
 Apparently the NexDock does not report itself to the host machine as a touchpad and provide pressure information but instead pretends to be a simple mouse, which means the OS isn't set up to do its own palm rejection.
 
@@ -260,7 +262,7 @@ Some Redditors suggest that for devices that do appear as a trackpad, you may ha
 
 https://www.reddit.com/r/lapdock/comments/124wcxw/lapdocks_with_real_trackpads/
 
-Palm rejection gloves exist, but no-one wants to put on gloves to use a computer.
+Palm rejection gloves exist, but no one wants to put on gloves to use a computer.
 https://www.amazon.com/Mixoo-Artists-Gloves-Pack-Rejection/dp/B07Z5SKXPS
 
 
@@ -337,6 +339,8 @@ https://www.newegg.com/logitech-g610-orion-cherry-mx-red-black/p/N82E16823126446
 
 https://www.newegg.com/p/N82E16823816143
 
+Avoid wireless keyboards - most of them can be both snooped and remotely hacked, and they add latency.
+
 ### Mouse
 
 Razer, Corsair, or Logitech
@@ -344,6 +348,8 @@ Razer, Corsair, or Logitech
 Maybe a Logitech G PRO Hero Wired Gaming Mouse
 
 https://www.newegg.com/p/N82E16823816143
+
+For wireless, consider the Razer Viper Ultimate
 
 ### Mouse Pad or Desk Pad
 
@@ -397,7 +403,7 @@ Intel i7-13700K
 
 For gaming we want best single thread performance, and enough (performance) cores.
 
-We could spend 50% more and get maybe 6% more single thread performance with an i9-13900K, but the i7 has the same number of performance cores at a similar clock speed, and the i9 is really about having additioanl efficiency cores.
+We could spend 50% more and get maybe 6% more single thread performance with an i9-13900K, but the i7 has the same number of performance cores at a similar clock speed, and the i9 is really about having additional efficiency cores.
 
 https://www.cpubenchmark.net/singleThread.html
 

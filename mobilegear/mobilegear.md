@@ -1,13 +1,4 @@
 
-UDock X Pro 4K - Lapdock 15.6" 4K Touch Screen Huawei Dex Monitor 
-https://www.uperfectmonitor.com/products/uperfect-x-pro-4k-15-6-lapdock?variant=39323812364360
-
-- 4k
-- Touch Screen
-- Keyboard is detachable
-- Kickstand
-
-
 Unify y - Vertical Monitor - 17.3"
 https://www.uperfectmonitor.com/products/uperfect-y-vertical-monitor-15-6?variant=39456049397832
 
@@ -51,19 +42,11 @@ https://www.amazon.com/RUFNTUF-ROTO-40-45-Monitor-Case-Black/
 Nanuk RUFNTUF ROTO Case with Foam Insert for 27-32" LCD/LED Monitor, Black 
 https://www.amazon.com/Nanuk-RUFNTUF-Insert-27-32-Monitor/dp/B0C2YGZJP5
 
+IOGEAR Dock Pro USB4 8K Triple View
+8.8" x 3.3" x 0.7"
 
-For plane:
-UDock X Pro 4K touch screen with detachable keyboard
-Eliminates need for tablet, and maybe even laptop; carry just phone or phone + steam deck + USB3 NVME
+GPD WIN 4
+8.6" x 3.6" x 1.1"
 
-
-For coffee shop, coworking space, hotel:
-- 2x or 3x 17" 2k
-- Ustands
-- USB kb + mouse
-
-
-Long term:
-32" monitor in hard case
-OR
-43" monitor in hard case with wheels
+Razer Viper Ultimate
+https://www.amazon.com/gp/product/B07YPC3BQC
