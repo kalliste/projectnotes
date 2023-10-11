@@ -55,11 +55,15 @@ An introduction to Elm-UI will help show the value of the Elm architecture.
 
 ["Functional Programming for Pragmatists" by Richard Feldman at GOTO 2021](https://youtu.be/3n17wHe5wEw)
 
-Also key to have an appreciation of Smalltalk
+["Why Static Typing Came Back" by Richard Feldman at GOTO 2022](https://youtu.be/Tml94je2edk)
+
+Also key to have an appreciation of Smalltalk and related
 
 ["Moldable development" by Tudor Gîrba](https://youtu.be/Pot9GnHFOVU)
 
 ["What FP can learn from Smalltalk" by Aditya Siram at Lambda World 2018]()
+
+["The Dynabook - Past Present and Future" by Alan Kay](https://youtu.be/GMDphyKrAE8)
 
 ["The computer revolution hasn't happened yet" by Alan Kay at OOPSLA 1997](https://youtu.be/oKg1hTOQXoY)
 
@@ -91,16 +95,35 @@ Let Brian Will talk shit about the dominant paradigm to you for a minute, it's g
 
 ["Object-Oriented Programming is Embarrassing: 4 Short Examples" by Brian Will](https://youtu.be/IRTfhkiAqPw)
 
+The third in his series notably brings up: State modules and logic modules
+
+- state modules may contain internal states and may reach out for external states
+- logic modules may not contain internal state nor reach out for external state
+
+Also cool: data types stand alone
+
 ["Object-Oriented Programming is Good*" by Brian Will](https://youtu.be/0iyB0_qPvWk)
 
+ThePrimagen's reaction video has some good thoughts
+
+[Object Oriented Programming is Good | Prime Reacts](https://youtu.be/uIxM3Hl0h7Q?si=sx_O1pAPJpZpouBQ")
+
 ["Clean Coders Hate What Happens to Your Code When You Use These Enterprise Programming Tricks" by Kevlin Henney](https://youtu.be/FyCYva9DhsI)
+
+["I Have Undo and Redo Working in the Command Line](https://youtu.be/9-sbJ-xpnq8)
+
+["Ted Nelson Demonstrates XanaduSpace"](https://youtu.be/1yLNGUeHapA)
+
+https://jasoncrawford.org/the-lessons-of-xanadu
+
+https://web.archive.org/web/20121010132154/http://shirky.com/writings/evolve.html
 
 
 # What it looks like
 
 We build our system in a few layers.
 
-The base layer is mostly Rust and as much as possible, it's existing libraries. At this layer we would like things like fast parsing and direct access to some native libraries. One central piece though is a good actor framework that lets us message across processes that may be on separate machines but which operates more efficiently if they happen to have access to "shared memory".
+The base layer is mostly Rust and as much as possible, it's existing libraries. At this layer we would like things like fast parsing and direct access to some native libraries. One central piece though is a good actor framework that lets us message across processes that may be on separate machines. One that operates more efficiently if they happen to have access to "shared memory".
 
 The next layer is Roc. Our Roc platform provides functional/immutable interface ports to the underlying facilities in Rust. Inside the Roc environment we are no longer thinking about a lot of the implementation details that are handled by the platform code in Rust. Concerns about things like threads, locks, memory management, and memory layout are isolated to the layer below until we find specific use cases for exposing them.
 
@@ -108,17 +131,30 @@ It would be nice if our Roc platform could do incremental compilation and hot re
 
 At the next (top?) layer we have a language that isn't exactly the Gleam programming language, but it resembles Gleam. It's Gleam-ish. Gleamish is a small, easy, statically typed, functional programming language with a familiar curly brackets syntax. Gleamish is multi-representational. You don't even have to see the code when you don't want to - we represent it visually for tasks where you want to get the big picture quickly.
 
-Gleamish is just functions. We don't write complicated state machines in Gleamish text syntax - we build state charts. We have charts for other things as well. Each domain we are working with is represented declaratively in text and has a visual representation. Where possible, either can be used. Neither the text nor the visual interface are the definitive copy. They are both rendered from a data structure that can represent them both, and changes are brokered between them in Elm Model-View-Update fashion.
+Gleamish is just functions. We don't write complicated state machines in Gleamish text syntax - we build state charts. We have charts for other things as well. Each domain we are working with is represented declaratively in text and has a visual representation. Where possible, either can be used. Neither the text nor the visual interface are the definitive copy as such. They are both rendered from a data structure that can represent them both, and changes are brokered between them in Elm Model-View-Update fashion.
+
+For state machines we may use the Lucy language in particular.
+
+Gleamish is a [compile and go system]("https://en.wikipedia.org/wiki/Compile_and_go_system") in normal usage. 
 
 ### Why these layers?
 
-It can be great to have everything in one language.
+It can be great to have everything in one language. We go a different direction.
 
 We want some things to be fast and efficient and we want access to native libraries. We need a systems programming language, and today that's Rust.
 
 Rust wants to be a systems programming language. We can abstract details away with macros, but it would be painful to build and maintain a full system of macros that takes us where we are going.
 
-Roc is closer. It's an applications programming language with niceties like automatic memory management. But the Roc compiler is focused on turning Roc into efficient native code artifacts. That's not our top goal with Gleamish. Gleamish is about live molding. We need it to run fairly fast sometimes, but it's not the most important concern, and sometimes we want to run our Gleamish code slow. We want to get all up in its business and watch it work. You can step through any language's execution in a debugger but that's not the primary use case for most languages. Our Gleamish tools will be focused on things like molding, debugging, tracing, and visualizing the activity and behavior of the system we are building. These concerns aren't necessarily in complete opposition to the things Roc cares about, but we can benefit from separating them. It also means our Gleamish syntax can be what we want it to be to fit our other goals and needs.
+Roc is closer. It's an applications programming language with niceties like automatic memory management. But the Roc compiler is focused on turning Roc into efficient native code artifacts. That's not our top goal with Gleamish. Gleamish is about live molding. We need it to run fairly fast sometimes, but it's not the most important concern, and sometimes we want to run our Gleamish code slow. We want to get all up in its business and watch it work. You can step through any language's execution in a debugger but that's not the primary use case for most languages. Our Gleamish tools will be focused on things like molding, debugging, tracing, and visualizing the activity and behavior of the system we are building. These concerns aren't necessarily in complete opposition to the things Roc cares about, but we can benefit from separating them. It also means our Gleamish language can be what we want it to be to fit our other goals and needs.
+
+### The two hard things in computer science
+
+It is said that the two hard things in computer science are cache invalidation, and naming things, and off-by-one errors.
+
+We tend to think of caches as a performance hack, but in a typical system, properties in long living objects end up acting as cached intermediate values in computations. You can try fixing this with accessor methods on your object that handle propagating updates to other values that need to reflect the change. This can be not so bad if those changes are purely internal to the same object.
+
+The world's most popular and successful programming language by far is Microsoft Excel, and we shouldn't be surprised that it has a solid solution for this. Everything is pure functions. If there are intermediate values that we want to see, they go in a cell. There are no cyclic connections between cells. The system knows the whole graph of dependencies between cells, so when a value changes it just walks the tree of dependencies updating things. Spreadsheets such as Excel also have a solution for naming, but given that it's a stupid-ass solution, I've elected to ignore it.
+
 
 # The Big Plan
 
@@ -144,6 +180,7 @@ Roc is closer. It's an applications programming language with niceties like auto
 
 ### Bonus rounds
 
+- Integrate Figma
 - Target and integrate BEAM/OTP
 - xdotool window management integration
 - Additional syntax with Hylo style mutable value semantics support
@@ -152,6 +189,10 @@ Roc is closer. It's an applications programming language with niceties like auto
 - More Crypto
 - LLM comment sync maintenance
 - Voice interface
+- OpenMath
+- Separate shell syntax for cli/tui/repl
+- OpenSCAD
+- Browser component (via Luakit?)
 
 # Desired properties
 
@@ -187,8 +228,6 @@ Bespoke: multi-representational
 
 # Second Level Principles
 
-## Provenance
-
 ## Distributed Tracing
 
 ## Interoperation
@@ -204,6 +243,66 @@ Interested in Rust ecosystem first. Erlang ecosystem for scaling. Python and R f
 ## Greedy
 
 ## For Pirates
+
+## Provenance
+
+See VisTrails for a system using Python, PyQT, matplotlib
+https://www.vistrails.org
+
+CodaLab
+https://worksheets.codalab.org/
+
+
+# Components
+
+... for inclusion or inspiration
+
+## Parsing
+
+https://lib.rs/parser-implementations
+
+https://github.com/rosetta-rs/parse-rosetta-rs
+
+https://docs.rs/winnow/latest/winnow/index.html
+
+## Backend
+
+Inkwell (llvm)
+https://github.com/TheDan64/inkwell
+
+lli - direct execution of LLVM bitcode
+https://llvm.org/docs/CommandGuide/lli.html
+
+## Parallelism
+
+https://lib.rs/crates/crossbeam
+
+Rayon
+
+https://lib.rs/crates/rayon
+
+https://smallcultfollowing.com/babysteps/blog/2015/12/18/rayon-data-parallelism-in-rust/
+
+https://github.com/rayon-rs/rayon/
+
+## Hot reload
+
+https://fungos.github.io/cr-simple-c-hot-reload/
+
+https://nim-lang.org/docs/hcr.html
+
+https://github.com/hasura/awesome-live-reloading\
+
+Concurrent data types
+
+https://lib.rs/crates/arcstr
+
+https://lib.rs/crates/sharded-slab
+
+https://lib.rs/crates/dashmap
+
+https://lib.rs/crates/archery
+
 
 # Design Decisions
 
@@ -349,6 +448,12 @@ https://github.com/rust-lang/miri
 
 https://www.reddit.com/r/rust/comments/n2cmvd/there_are_a_lot_of_actor_framework_projects_on/
 
+### Mun
+
+Designed for hot reloading
+
+http://mun-lang.org/
+
 ### LiveCode
 
 A modern cross-platform HyperCard
@@ -360,6 +465,10 @@ https://en.wikipedia.org/wiki/LiveCode_(company)
 http://lighttable.com/
 
 Shows debug out with the code that made it
+
+### XSLT
+
+Yah
 
 ### Rust excvr
 
@@ -575,11 +684,15 @@ Use GraphicsMagick
 
 ### Some great quotes
 
+"The object is not to create great software, but to create an environment where great software is inevitable" - Woody Zuill (paraphrasing Robert Henri)
+
 "Any sufficiently complicated C or Fortran program contains an ad hoc, informally-specified, bug-ridden, slow implementation of half of Common Lisp." - Greenspun's tenth rule
 
 "All non-trivial abstractions, to some degree, are leaky." - Joel Sapolsky's Law of Leaky Abstractions
 
 "Regarding the fact that I regret adding threads to the language because they are too difficult to use correctly, I don't want to add yet another variation of threads." - Yukihiro Matsumoto
+
+"There are only two hard things in Computer Science: cache invalidation and naming things." - Phil Karlton
 
 "Simple things should be simple, complex things should be possible." - Alan Kay
 
@@ -757,7 +870,7 @@ Jitter evolved into a research project investigating the ideas of:
 - Treating a compiler as a library
 - Language extension mechanisms
 
-All data types in Jitter align with Rust's #[repr(C)]. Because all primitive types also align with Rust's, interop is simple.
+All data types in Jitter align with Rust's repr(C). Because all primitive types also align with Rust's, interop is simple.
 
 https://github.com/playXE/sierra-scheme
 
@@ -790,6 +903,8 @@ https://tfpk.github.io/nominomicon/
 
 # Educational Resources
 
+https://www.epatters.org/wiki/logic-plt/dataflow-programming
+
 https://book.marwood.io/
 
 https://craftinginterpreters.com/
@@ -802,6 +917,11 @@ https://en.wikipedia.org/wiki/Meta-circular_evaluator
 
 https://en.wikipedia.org/wiki/Type_system#Existential_types
 
+### Method Dispatch
+
+https://en.wikipedia.org/wiki/Dynamic_dispatch
+
+https://en.wikipedia.org/wiki/Monomorphization
 
 ### Rust compile time
 
@@ -841,4 +961,3 @@ https://tauri.app/
 MIT / Apache dual for some components
 
 Maybe some triple AGPL/BSL/Proprietary that time bombs to MIT / Apache dual
-

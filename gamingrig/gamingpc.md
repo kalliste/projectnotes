@@ -30,6 +30,7 @@
     + [Mouse](#mouse)
     + [Mouse Pad or Desk Pad](#mouse-pad-or-desk-pad)
     + [Joystick](#joystick)
+    + [Glasses](#glasses)
 
 
 - [Gaming PC](#gaming-pc)
@@ -377,6 +378,12 @@ https://www.amazon.com/Retro-Games-Joystick-not-machine-specific/dp/B07H25X279
 8Bitdo Arcade Stick
 https://www.amazon.com/dp/B08GJC5WSS/
 
+### Glasses
+
+Viture - made for Steam Deck
+
+https://www.viture.com/
+
 # Gaming PC
 
 ## Overview
@@ -487,7 +494,7 @@ Probably we will top mount our AIO radiator, fill out the front and back of our 
 
 https://www.newegg.com/noctua-nf-a14-pwm-case-fan/p/N82E16835608044
 
-### Power Suppply
+### Power Supply
 
 https://cultists.network/140/psu-tier-list/
 
@@ -524,3 +531,34 @@ https://puri.sm/posts/phosh-overview/
 ### Batocera
 
 https://wagnerstechtalk.com/sd-batocera/
+
+
+## Boot / USB / Multi-Boot
+
+rEFInd
+
+https://github.com/jlobue10/SteamDeck_rEFInd
+
+Rufus
+
+https://rufus.ie/en/
+
+Ventoy
+
+https://www.ventoy.net/en/index.html
+
+### Windows on Steam Deck
+
+https://www.reddit.com/r/SteamDeck/comments/tip15k/my_experience_with_windows_11_on_steam_deck_has/
+
+https://glossi.flatspot.pictures/
+
+https://steam-deck-tools.ayufan.dev/
+
+### Android
+
+https://gitlab.com/popsulfr/steam-deck-tricks
+
+https://github.com/yui0/berry-os
+
+

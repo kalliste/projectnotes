@@ -35,11 +35,11 @@ https://www.newegg.com/uperfect-m173k03-d3-17-3-fhd/p/0JC-00VS-000A5?Item=9SIBJB
 https://www.newegg.com/uperfect-m173j01-d3-17-3-fhd/p/0JC-00VS-000B3?Item=9SIBJBBK1C5354
 
 
-RUFNTUF ROTO - 40-45” LCD/LED/Monitor Case with Wheels– Black 
+RUFNTUF ROTO - 40-45” LCD/LED/Monitor Case with Wheels– Black
 https://www.amazon.com/RUFNTUF-ROTO-40-45-Monitor-Case-Black/
 
 
-Nanuk RUFNTUF ROTO Case with Foam Insert for 27-32" LCD/LED Monitor, Black 
+Nanuk RUFNTUF ROTO Case with Foam Insert for 27-32" LCD/LED Monitor, Black
 https://www.amazon.com/Nanuk-RUFNTUF-Insert-27-32-Monitor/dp/B0C2YGZJP5
 
 IOGEAR Dock Pro USB4 8K Triple View
@@ -50,3 +50,62 @@ GPD WIN 4
 
 Razer Viper Ultimate
 https://www.amazon.com/gp/product/B07YPC3BQC
+
+### Attach hub to steam deck
+
+JSAUX Hub
+Height                23.5mm
+Width                 61.8mm
+Length               120mm
+
+OWC Thunderbolt Hub
+17mm
+73mm
+118mm
+
+V VCOM 40Gbps NVME M.2 2280 USB4
+0.53"  13.46mm
+2.08"  52.83mm
+3.94" 100.08mm
+
+Acasis Tool-Free 40Gbps M.2 USB4
+0.55"  13.97mm
+1.77"  44.96mm
+4.13" 104.90mm
+
+
+CalDigit Thunderbolt 4 Element Hub
+Height:    0.70"      18mm
+Width:     2.75"      70mm
+Length:    4.48"     114mm
+Weight:    0.39lbs   0.18kg
+
+
+Sonnet Echo 5
+21.6mm
+72mm
+129mm
+
+EDiMAX 5-in-1 Thunderbolt 4 Mini Slim Dock
+0.51    13mm
+2.91    74mm
+4.88   124mm
+
+
+Sabrent Thunderbolt 4 Hub
+0.6    15.24mm
+2.8    71.12mm
+4.5   114.30mm
+7oz / 0.44 pounds / 198grams
+
+
+JSAUX pads are 1.97" x 1.65"
+50mm x 42mm
+
+
+Acasis 40Gbps NVME Enclosure
+Daisy chaining, DisplayPort and USB
+Thunderbolt only...
+20mm
+67mm
+110mm
