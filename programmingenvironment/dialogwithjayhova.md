@@ -36,7 +36,7 @@
 > But yes I think you are generally on track with this. We may even be able to get the language model chatbots trained up to ask the right questions much of the time, and in natural language, to guide a person to consider the right information to make the right decisions, and to resolve the inconsistencies and imprecision in what they are trying to ask for
 
 
-> One of the funny things with Ted Nelson is that he really sees so well how all of this went off track at Xerox PARC. All of our systems are built on a user interface system that was all about paper metaphor thinking and paper compatibility. It's great for selling printers and copy machines. But being so anti-PARC I think means that he misses a lot of the things that were really cool about what they did at PARC. Much of the really important really valuable stuff there got lost as we went from the Alto to the Macintosh and Windows and all the variations we see in the Linux desktop.
+> One of the funny things with Ted Nelson is that he really sees so well how all of this went off track at Xerox PARC. All of our systems are built on a user interface design that was all about paper metaphor thinking and paper compatibility. It's great for selling printers and copy machines. But being so anti-PARC I think means that he misses a lot of the things that were really cool about what they did at PARC. Much of the really important really valuable stuff there got lost as we went from the Alto to the Macintosh and Windows and all the variations we see in the Linux desktop.
 > 
 > If he had been building his system the way that they built Smalltalk, I think he might have had more success with it by now.
 
@@ -80,3 +80,23 @@
 > 
 
 > I think the way we get there does look a lot like a Smalltalk system such as Glamorous Toolkit, but also using a lot of things we've learned and developed since 1980 that weren't part of the design for Smalltalk. Things like provenance, time-travel debugging, type checking and type inference, the actor model of concurrency, namespacing, model-view-update, state charts, and grammar of graphics.
+
+### JHVH-4x4
+
+> I am picturing the interface being something like a command line where you type things like "create a program" and you get feedback maybe "okay" or maybe it opens a window with instructions. Maybe you say "print Hello World" and you see "Hello World" gets printed and "print 'Hello World'" in the instructions/Meta-code window. You might then say "make it bigger" and "print 'Hello World' large" appears in the instructions window.
+> 
+> The meta-code is not code it is a description of what the code is doing. The interpreter/compiler is building the code in the background and compiling it on the fly and showing you the result.
+> 
+> I get the term meta-code from interpreter software where a language is first translated into a meta-language that describes the meaning of the content and then takes that descriptive meta-language and uses it to construct sentences in another language.
+
+### Upgrade
+
+> Ok yah I see what you mean here. There actually would be a layer at which we wouldn't call it code because it's still pretty much natural language.
+> 
+> The "meta-code" might look like a collection of either direct quotes or paraphrasings of what the bot and the humans have agreed on as being the description of the program. At the next level down there would be a version of things that actually is code, but that code would mostly be declarative rather than procedural. That declarative code then gets interpreted or compiled into machine instructions just like with a spreadsheet or a Haskell program now.
+> 
+> We can totally get GPT-4 to do this now with a little prompt-kiddery and the right plugins. It just kind of sucks at it. Stuff like langchain and AutoGPT can make it better, and we can take it further by spending time crafting prompts and fine tuning models.
+> 
+> A big improvement should come with just engineering language models with bigger token limits. Not saying that is easy but it is being actively worked on by people with a lot more money than we have.
+> 
+> The stuff I am focused on is constraining and designing the the layer right below the meta-code. None of this is going to go particularly well if at that layer we have this huge anything-goes design space using an existing popular programming language and whatever random code libraries we pick as we go. Instead we have a language specifically designed for this system and a specific set of libraries, and a specific application template that we start with as scaffolding. We may extend the language and we may add libraries, but we need to be starting with an overall coherent plan concerning how things are organized and the main basic building blocks we are using.
