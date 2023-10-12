@@ -13,7 +13,8 @@
 
 ### Upgrade
 
-> Yes, the hubristic user interface for programming looks viable now or soon:https://www.unqualified-reservations.org/2009/07/wolfram-alpha-and-hubristic-user/
+> Yes, the hubristic user interface for programming looks viable now or soon:
+> https://www.unqualified-reservations.org/2009/07/wolfram-alpha-and-hubristic-user/
 > 
 > But this is not actually the problem really -- it comes from a misconception that non-programmers have about what programmers do.
 > 
@@ -38,3 +39,44 @@
 > One of the funny things with Ted Nelson is that he really sees so well how all of this went off track at Xerox PARC. All of our systems are built on a user interface system that was all about paper metaphor thinking and paper compatibility. It's great for selling printers and copy machines. But being so anti-PARC I think means that he misses a lot of the things that were really cool about what they did at PARC. Much of the really important really valuable stuff there got lost as we went from the Alto to the Macintosh and Windows and all the variations we see in the Linux desktop.
 > 
 > If he had been building his system the way that they built Smalltalk, I think he might have had more success with it by now.
+
+### JHVH-4x4
+
+> "But this is not actually the problem really -- it comes from a misconception that non-programmers have about what programmers do. The ability to read and write Spanish proficiently will not make you Cervantes."
+> 
+> This is of course quite true. Thus far the solution has been rigid syntax. However, iteration would be IMHO a better solution. The interpreter could operate a bit like a grammar checker prompting the user to think about how things will work. Sort of a building inspector and instructor all in one. e.g. "This stack will likely overflow when configured like this, Here are ways you can prevent that." In essence the interpreter will try and prevent you from writing bad code.
+
+### Upgrade
+> 
+> Yah. Building a system like that will itself have to be pretty iterative
+
+> Having it go all the way there requires human level general intelligence in the AI, but we can design the system in ways that let the chatbot help with more and more things as we go
+
+> This talk from Jack Rusher just dropped today. His talk from the same conference last year is the #1 recommended video in the overall plan doc I had sent above.
+>
+> One of the key ideas here is about how really good notation in math is a powerful tool for amplifying our thinking with math things
+> https://youtu.be/1cRFfYQYGxE
+>
+> A math or physics textbook or an engineering design document is going to have mathematical notation in it, both because having stuff in this form is good for being able to manipulate the symbols to answer new questions, but also because the notation is a often a more precise, clear, fast, and effective communication tool for humans that can read it. Programming languages are not a barrier to entry so much as they are a tool for doing the kind of thinking that is called for in building a large complex system.
+>
+> But it is also true that there are a lot of tedious details in all of our code that are not helpful for this thinking and iterating process. We've made some progress here in different ways. Kotlin and Swift and Go got rid of the semicolons. (JavaScript swept them under the rug but wasn't able to do it right, so now the semicolons are still there and still matter sometimes, but they are invisible.)
+>
+> Scripting languages like Python and JavaScript save us from having a lot of low level concerns mixed in with our code, but they don't isolate us from those details nearly as well as a good language could.
+
+> My expectation is that a good system will let you do a lot via just English conversation with a chat interface. But also power users should be able to open up the hood and see charts and graphs and tables and do a lot more there before having to go down further into a place where it's more often about looking at text and symbols. Making things be really good in that middle space of visual representations should be a lot of the work needed in setting things up for the AI to be more helpful at that top surface level of interaction
+
+> Right now that middle space is mostly all stuff that programmers do in their heads, most often without realizing it
+>
+
+> There's a key quote here seen in Steve Job's NextSTEP 3 demo video.
+> 
+> https://youtu.be/rf5o5liZxnA
+> 
+> "Now think of the NeXT's - think of NeXTSTEP, which is NeXT's object oriented development environment, as an object-oriented cake. I'm about to show you just the frosting on the cake. Many people have tried to copy this frosting, but what they found out is without the object-oriented cake underneath, it just doesn't work."
+> 
+> A language model can help us translate between code and English for comments, end-user documentation, and our requirements and specifications documents. We can probably get the LLM to do a huge amount of work for us in keeping those types of things in sync with the code.
+> 
+> But the big thing we want is moldability. We want to be able to make a change to the specification and have that be reflected in the actual system. We want to be able to take the system and see and understand rapidly what it is doing now, and compare that to what we want it to do. The Glamorous Toolkit is an example of a modern system designed for moldable development. Some of what goes into that is in the user interface, but it's a design concern that carries into the entire system.
+> 
+
+> I think the way we get there does look a lot like a Smalltalk system such as Glamorous Toolkit, but also using a lot of things we've learned and developed since 1980 that weren't part of the design for Smalltalk. Things like provenance, time-travel debugging, type checking and type inference, the actor model of concurrency, namespacing, model-view-update, state charts, and grammar of graphics.
