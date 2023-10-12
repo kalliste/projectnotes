@@ -29,7 +29,7 @@
 
 > Taking it from another angle -- I suspect a big part of our trouble now is that we should be expressing much much more about the structure and behavior of our software visually with graphs and diagrams instead of purely with language only. Related to this we need to be able to organize things in ways that let us see the big picture of the thing we are working on, but also drill into details without getting bogged down because the details we need are tangled up with the details we don't.
 > 
-> Language models can help us offload a lot of work to the machines that we couldn't before, but we still need to be able to structure software in a way that it can be subdivided into right size chunks humans can talk about and think about without breaking stuff in adjacent (or distant!) parts of the system
+> Language models can help us offload a lot of work to the machines that we couldn't before, but we still need to be able to structure software in a way that it can be sliced and subdivided into right size chunks humans can talk about and think about without breaking stuff in adjacent (or distant!) parts of the system
 > 
 > Ideally coming out of this much of the system would be very much like you are imagining. Humans would be working against basically English language documentation of the system, maybe even using a UI that resembles Ted Nelson's stuff in some ways, but also through speech instead of screens when we like. The machines can help us with the task of keeping English overview synchronized (both ways) with the actual code, but until we have full Strong AI we'll still need humans to be able to work with more precise tools sometimes than English. Again though, that doesn't necessarily have to be programming languages as we know them. It could look more like Scratch, or Touch Designer.
 > 
@@ -63,9 +63,9 @@
 >
 > Scripting languages like Python and JavaScript save us from having a lot of low level concerns mixed in with our code, but they don't isolate us from those details nearly as well as a good language could.
 
-> My expectation is that a good system will let you do a lot via just English conversation with a chat interface. But also power users should be able to open up the hood and see charts and graphs and tables and do a lot more there before having to go down further into a place where it's more often about looking at text and symbols. Making things be really good in that middle space of visual representations should be a lot of the work needed in setting things up for the AI to be more helpful at that top surface level of interaction
+> My expectation is that a good system will let you do a lot via just English conversation with a chat interface. But also power users should be able to open up the hood and see charts and graphs and tables and do a lot more there before having to go down further into a place where it's more often about looking at text and symbols. Making things be really good in that middle space of visual representations should overlap a fair bit with the work needed in setting things up for the AI to be more helpful at that top surface level of interaction.
 
-> Right now that middle space is mostly all stuff that programmers do in their heads, most often without realizing it
+> Right now that middle space is mostly all stuff that programmers do in their heads, most often without realizing it.
 >
 
 > There's a key quote here seen in Steve Job's NextSTEP 3 demo video.
@@ -99,4 +99,24 @@
 > 
 > A big improvement should come with just engineering language models with bigger token limits. Not saying that is easy but it is being actively worked on by people with a lot more money than we have.
 > 
-> The stuff I am focused on is constraining and designing the the layer right below the meta-code. None of this is going to go particularly well if at that layer we have this huge anything-goes design space using an existing popular programming language and whatever random code libraries we pick as we go. Instead we have a language specifically designed for this system and a specific set of libraries, and a specific application template that we start with as scaffolding. We may extend the language and we may add libraries, but we need to be starting with an overall coherent plan concerning how things are organized and the main basic building blocks we are using.
+> The stuff I am focused on is constraining and designing the layer right below the meta-code. None of this is going to go particularly well if at that layer we have this huge anything-goes design space using an existing popular programming language and whatever random code libraries we pick as we go. Instead we have a language specifically designed for this system and a specific set of libraries, and a specific application template that we start with as scaffolding. We may extend the language and we may add libraries, but we need to be starting with an overall coherent plan concerning how things are organized and the main basic building blocks we are using.
+
+### JHVH-4x4
+
+> I foresee moving away from structure oriented programing to results oriented programming.
+> 
+> The language (whatever form it may take) should define success and or failure. e.g. Draw a ball that is not blue. As long as an image of a ball is drawn (and the ball is not blue) the conditions for success have been met.  As long as you can describe all the conditions defining success/failure your language is fine.
+> 
+> I imagine there will be a very rapid evolution of language and visual tools to do this. Certainly this will favor the guy who finds the best most succinct way to create this.
+> 
+> There is a thing, salt is not a problem unless it is a problem. If you are cutting salt out of your diet and you do not have elevated sodium levels you are in a struggle with not benefit. Likewise if you tell your machine to write a hello world program, there thousands of way to do it.  The structure of the hello world program is irrelevant unless that particular structure is a problem. Again, constraints are the important part. Create a hello world program that is as small as possible;  create a hello world program that is as fast as possible, etc.
+
+### Upgrade
+
+> "As long as you can describe all the conditions defining success/failure your language is fine."
+> 
+> Putting together a complete list that fully defines the behavior we want is at least 10x more work, if not impossible. See: "formal verification" and "halting problem"
+> 
+> But in the right system, probably we can get pretty far by amassing a pile of sentences describing what we want and what we don't want
+> 
+> Also, in the right system we may be able to crowd-source the work a lot more instead of assigning big components to specific people
