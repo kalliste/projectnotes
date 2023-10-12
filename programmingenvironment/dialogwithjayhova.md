@@ -27,7 +27,7 @@
 > 
 > Yes, we call that a compiler. The main point of high level programming languages is that they are the human readable version of a computer program.
 
-> Taking it from another angle -- I suspect a big part of our trouble now is that we should be expressing much much more about the structure and behavior of our software visually with graphs and diagrams instead of purely with language only. Related to this we need to be able to organize things in ways that let us see the big picture of the thing we are working on, but also drill into details without getting bogged down because the details we need are tangled up with the details we don't.
+> Taking it from another angle -- I suspect a big part of our trouble now is that we should be expressing much much more about the structure and behavior of our software visually with graphs and diagrams instead of purely with language only. Related to this we need to be able to organize things in ways that let us see the big picture of the thing we are working on, but also drill into details without getting bogged down because the details we need at that moment are tangled up with the details we don't.
 > 
 > Language models can help us offload a lot of work to the machines that we couldn't before, but we still need to be able to structure software in a way that it can be sliced and subdivided into right size chunks humans can talk about and think about without breaking stuff in adjacent (or distant!) parts of the system
 > 
@@ -120,3 +120,5 @@
 > But in the right system, probably we can get pretty far by amassing a pile of sentences describing what we want and what we don't want
 > 
 > Also, in the right system we may be able to crowd-source the work a lot more instead of assigning big components to specific people
+
+> My expectation is that if you tried to go after this goal directly now without doing all this other stuff to set the AI up for success, and without a human taking a turn frequently, the bot would run a long long time and fail to produce a result that meets the specification, and when it did succeed in producing such a result, it would be very wrong in all sorts of ways you didn't think of to say yet. Basically it would be slower and worse than having the human drive and getting the bot to help with pieces here and there. But people are trying it! So we can just let them do that and see if they can prove me wrong.
