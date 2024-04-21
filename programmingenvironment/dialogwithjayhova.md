@@ -101,6 +101,10 @@
 > 
 > The stuff I am focused on is constraining and designing the layer right below the meta-code. None of this is going to go particularly well if at that layer we have this huge anything-goes design space using an existing popular programming language and whatever random code libraries we pick as we go. Instead we have a language specifically designed for this system and a specific set of libraries, and a specific application template that we start with as scaffolding. We may extend the language and we may add libraries, but we need to be starting with an overall coherent plan concerning how things are organized and the main basic building blocks we are using.
 
+> "The interpreter/compiler is building the code in the background and compiling it on the fly and showing you the result."
+> 
+> Yup, that's important. It needs to be live, and I've been looking at a lot of the specific engineering decisions and work that go into making that go well. One of the biggest pieces is pretty similar to what lets spreadsheets be live. There's no visible compilation step with spreadsheets - you just edit the formulas live and it knows what depends on what.
+
 ### JHVH-4x4
 
 > I foresee moving away from structure oriented programing to results oriented programming.

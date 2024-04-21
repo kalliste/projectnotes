@@ -118,6 +118,7 @@ https://jasoncrawford.org/the-lessons-of-xanadu
 
 https://web.archive.org/web/20121010132154/http://shirky.com/writings/evolve.html
 
+["What's Zig got that C, Rust and Go don't have? (with Loris Cro)"](https://youtu.be/5_oqWE9otaE)
 
 # What it looks like
 
@@ -133,7 +134,7 @@ At the next (top?) layer we have a language that isn't exactly the Gleam program
 
 Gleamish is just functions. We don't write complicated state machines in Gleamish text syntax - we build state charts. We have charts for other things as well. Each domain we are working with is represented declaratively in text and has a visual representation. Where possible, either can be used. Neither the text nor the visual interface are the definitive copy as such. They are both rendered from a data structure that can represent them both, and changes are brokered between them in Elm Model-View-Update fashion.
 
-For state machines we may use the Lucy language in particular.
+For state machines we may use the [Lucy](https://pkg.spooky.click/lucylang/) language in particular.
 
 Gleamish is a [compile and go system]("https://en.wikipedia.org/wiki/Compile_and_go_system") in normal usage. 
 
