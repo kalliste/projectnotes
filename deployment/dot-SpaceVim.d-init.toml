@@ -1,0 +1,87 @@
+#=============================================================================
+# dark_powered.toml --- dark powered configuration example for SpaceVim
+# Copyright (c) 2016-2022 Wang Shidong & Contributors
+# Author: Wang Shidong < wsdjeg@outlook.com >
+# URL: https://spacevim.org
+# License: GPLv3
+#=============================================================================
+
+# All SpaceVim option below [option] section
+[options]
+    # set spacevim theme. by default colorscheme layer is not loaded,
+    # if you want to use more colorscheme, please load the colorscheme
+    # layer
+    #colorscheme = "srcery"
+    #colorscheme = "vim-monokai-tasty"
+    colorscheme = "pop-punk"
+    colorscheme_bg = "dark"
+    # Disable guicolors in basic mode, many terminal do not support 24bit
+    # true colors
+    enable_guicolors = true
+    # Disable statusline separator, if you want to use other value, please
+    # install nerd fonts
+    statusline_separator = "arrow"
+    statusline_iseparator = "arrow"
+    buffer_index_type = 4
+    enable_tabline_filetype_icon = true
+    enable_statusline_mode = false
+    default_indent = 4
+    expand_tab = true
+
+
+# Enable autocomplete layer
+[[layers]]
+    name = 'autocomplete'
+    auto_completion_return_key_behavior = "complete"
+    auto_completion_tab_key_behavior = "smart"
+
+[[layers]]
+    name = 'shell'
+    default_position = 'top'
+    default_height = 30
+
+[[layers]]
+    name = 'colorscheme'
+
+[[layers]]
+    name = 'lang#php'
+
+[[layers]]
+    name = 'lsp'
+    filetypes = ['php']
+
+[[layers]]
+    name = 'lang#php'
+
+[[layers]]
+    name = 'lang#python'
+    python_interpreter = '/usr/bin/python'
+
+[[layers]]
+    name = 'lang#javascript'
+
+[[layers]]
+    name = 'lang#c'
+    enable_clang_syntax_highlight = true
+
+[[layers]]
+    name = 'lang#kotlin'
+
+[[layers]]
+    name = 'lang#java'
+
+[[layesr]]
+    name = 'tools#mpv'
+    mpv_interpreter = '/usr/bin/mpv'
+
+[[custom_plugins]]
+  repo = "mhartington/oceanic-next"
+  merged = 0
+
+[[custom_plugins]]
+  repo = "patstockwell/vim-monokai-tasty"
+  merged = 0
+
+[[custom_plugins]]
+  repo = "bignimbus/pop-punk.vim"
+  merged = 0
