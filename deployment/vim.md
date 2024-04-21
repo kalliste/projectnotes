@@ -10,6 +10,7 @@ cd ~/.SpaceVim.d
 vi init.toml
 
 mkdir -p ~/.SpaceVim.d
+wget https://raw.githubusercontent.com/kalliste/projectnotes/main/deployment/dot-SpaceVim.d-init.toml -O ~/.SpaceVim.d/init.toml
 
 
 
