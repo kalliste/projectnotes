@@ -33,7 +33,6 @@ SpaceVim
 ```
 mkdir -p ~/.config
 curl -sLf https://spacevim.org/install.sh | bash
-cd ~/.SpaceVim.d
 ```
 
 
